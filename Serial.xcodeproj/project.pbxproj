@@ -17,6 +17,7 @@
 		E1B6BB032405FBA200E74308 /* termios.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB022405FBA200E74308 /* termios.swift */; };
 		E1B6BB052405FBEF00E74308 /* parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB042405FBEF00E74308 /* parameters.swift */; };
 		E1B6BB072405FC4000E74308 /* flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB062405FC4000E74308 /* flags.swift */; };
+		E1B6BB0B2406F41B00E74308 /* logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB0A2406F41B00E74308 /* logging.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,7 @@
 		E1B6BB022405FBA200E74308 /* termios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = termios.swift; sourceTree = "<group>"; };
 		E1B6BB042405FBEF00E74308 /* parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parameters.swift; sourceTree = "<group>"; };
 		E1B6BB062405FC4000E74308 /* flags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flags.swift; sourceTree = "<group>"; };
+		E1B6BB0A2406F41B00E74308 /* logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logging.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				E1B6BAFA2402FC7300E74308 /* errors.swift */,
 				E1B6BAFC2402FD6100E74308 /* port.swift */,
 				E1B6BB092405FCB400E74308 /* Connections */,
+				E1B6BB0A2406F41B00E74308 /* logging.swift */,
 			);
 			path = Serial;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				E1B6BAFD2402FD6100E74308 /* port.swift in Sources */,
 				E1B6BAFB2402FC7300E74308 /* errors.swift in Sources */,
 				E1B6BB072405FC4000E74308 /* flags.swift in Sources */,
+				E1B6BB0B2406F41B00E74308 /* logging.swift in Sources */,
 				E1B6BB032405FBA200E74308 /* termios.swift in Sources */,
 				E1B6BB052405FBEF00E74308 /* parameters.swift in Sources */,
 			);

@@ -91,19 +91,73 @@ public enum HardwareFlowControl : SimpleSerialParameter {
     ]
 }
 
+
+
 public struct SerialFlags {
+    public enum Mode {
+        case _8N1
+        case _7E1
+        case _7O1
+        case _7S1
+    }
     var rate : Bauds = .b9600
     var flowControl : FlowControl = .None
     var rawInput : Bool = true
     var crlfOutput : Bool = false
     var size : Bits = .b8
     var parity : Parity = .None
+    var blocking : Bool = false
+    var timeout : Int8 = 0
+    var minRead : Int8 = 0
     
-    public init(_ rate : Bauds = .b9600, raw : Bool = true) {
+    public init(_ rate : Bauds = .b9600, raw : Bool = true, blocking: Bool = false) {
         self.rate = rate
         self.rawInput = raw
         self.crlfOutput = !raw
+        self.blocking = blocking
     }
+    
+    @discardableResult public mutating func set(rate : Bauds) -> SerialFlags {
+        self.rate = rate
+        return self
+    }
+    @discardableResult public mutating func set(flowControl : FlowControl) -> SerialFlags {
+        self.flowControl = flowControl
+        return self
+    }
+    @discardableResult public mutating func set(raw : Bool,crlf : Bool = false) -> SerialFlags {
+        self.rawInput=raw
+        self.crlfOutput=crlf
+        return self
+    }
+    @discardableResult public mutating func set(mode : Mode) -> SerialFlags {
+        switch mode {
+        case ._8N1, ._7S1:
+            size = .b8
+            parity = .None
+        case ._7E1:
+            size = .b7
+            parity = .Even
+        case ._7O1:
+            size = .b7
+            parity = .Odd
+        }
+        return self
+    }
+    @discardableResult public mutating func set(blocking : Bool) -> SerialFlags {
+        self.blocking=blocking
+        return self
+    }
+    @discardableResult public mutating func set(timeout: Double = 0,minRead : UInt = 0) -> SerialFlags {
+        self.timeout = Int8(min(max(timeout,0), 10)*10)
+        self.minRead = numericCast(minRead)
+        return self
+    }
+    
+    public var minimumRead : Int {
+        return blocking ? numericCast(minRead) : 0
+    }
+    
     
     public func apply(_ term : inout termios) {
         
@@ -125,8 +179,10 @@ public struct SerialFlags {
         
         if rawInput {
             cfmakeraw(&term)
-            term.set_cc(VMIN, 0)
-            term.set_cc(VTIME, 0)
+            if blocking {
+                term.set_cc(VMIN, self.timeout)
+                term.set_cc(VTIME, self.minRead)
+            }
         }
         else {
             term.c_lflag |= numericCast(ICANON | ECHO | ECHOE | ISIG)
@@ -143,11 +199,11 @@ public struct SerialFlags {
             term.c_iflag |= numericCast(INPCK | ISTRIP)
         }
         
-        
+ 
         
     }
     
-    public func apply(port fd : Int32) {
+    public func apply(port fd : Int32) throws {
         var term = termios()
         tcgetattr(fd, &term)
         
@@ -155,6 +211,9 @@ public struct SerialFlags {
         
         term.c_cflag |= numericCast(CLOCAL | CREAD)
         tcsetattr(fd, TCSANOW, &term)
+        
+        let flag = blocking ? 0 : FNDELAY
+        try wfcntl(fd, F_SETFL, flag);
     }
 }
 

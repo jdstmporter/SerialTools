@@ -10,7 +10,7 @@ import Foundation
 import IOKit
 import IOKit.serial
 
-public class SerialPort : CustomStringConvertible, Sequence {
+public class SerialPort : CustomStringConvertible, CustomDebugStringConvertible, Sequence {
     public typealias Iterator = Dictionary<String,Any>.Iterator
     private let object : IOObject
     public private(set) var id : UInt64
@@ -67,7 +67,10 @@ public class SerialPort : CustomStringConvertible, Sequence {
     // Custom string convertible methods
     
     public var description: String {
-        return "Port \(name ?? "-") << \(inbound ?? "-") >> \(outbound ?? "-")"
+        return name ?? ""
+    }
+    public var debugDescription: String {
+        return "Port \(name ?? "-") with device file \(outbound ?? "")"
     }
     
     

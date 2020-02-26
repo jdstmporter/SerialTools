@@ -12,6 +12,22 @@ enum Errors : Error {
     case noSuchPort
 }
 
+class Delegate : ConnectionDelegate {
+    func receivedBytes(_ bytes: [UInt8]) {
+        let s = String(bytes: bytes, encoding: .ascii) ?? "-"
+        print("Got \(s)")
+    }
+    
+    func receivedError(_ e: BaseError) {
+        print("Error : \(e)")
+        SysLog.error(e)
+    }
+    
+    
+    
+    
+}
+
 do {
     let s = try IOSystem()
     s.enumerated().forEach { kv in
@@ -24,16 +40,14 @@ do {
     print("The port is \(port)")
     
     let connection = try Connection(port)
-    let flags = SerialFlags()
-    try connection.connect(flags: flags,blocking: true)
+    connection.delegate=Delegate()
+    let flags = SerialFlags(blocking: true)
+    try connection.connect(flags: flags)
     print("Connected")
-    connection.listen { bytes in
-        let s = String(bytes: bytes, encoding: .ascii) ?? "-"
-        print("Got \(s)")
-    }
+    connection.listen()
     
     while true {
-        try connection.out("fred")
+        try connection.send("fred")
         _ = readLine()
     }
     

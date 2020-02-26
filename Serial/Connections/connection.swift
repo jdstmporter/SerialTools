@@ -15,7 +15,12 @@ import IOKit.serial
 public typealias SerialFlag = (c:UInt, i:UInt, o:UInt)
 
 
-
+public protocol ConnectionDelegate {
+    
+    func receivedBytes(_ : [UInt8])
+    func receivedError(_ : BaseError)
+    
+}
 
 
 public class Connection {
@@ -24,6 +29,8 @@ public class Connection {
     private let path : String
     private var fd : Int32 = -1
     private var listening : Bool = false
+    private var minimum : Int = 0
+    public var delegate : ConnectionDelegate?
     
     public init(_ port : SerialPort) throws  {
         self.port=port
@@ -35,19 +42,15 @@ public class Connection {
     
     
     
-    public func connect(flags : SerialFlags,blocking: Bool = false) throws {
+    public func connect(flags : SerialFlags) throws {
         if try port.isBusy() { throw SerialError(kIOReturnBusy) }
         self.fd = try path.withCString { try wopen($0, O_RDWR | O_NOCTTY | O_NDELAY) }
         if self.fd<0 { throw SerialError(kIOReturnNotOpen) }
          
         // apply serial flags
         
-        flags.apply(port: self.fd)
-        
-        // set blocking mode
-        
-        let flag = blocking ? 0 : FNDELAY
-        try wfcntl(fd, F_SETFL, flag);
+        try flags.apply(port: self.fd)
+        //self.minimum = flags.minimumRead
     }
     
     public func disconnect() throws {
@@ -61,25 +64,19 @@ public class Connection {
     
     public var bytes : [UInt8] {
         get {
-            var data = Array<UInt8>(repeating: 0, count: 20)
-            let n : Int = data.withUnsafeMutableBytes { ptr in
-                if let raw = ptr.baseAddress {
-                    return read(fd, raw, 1)
-                }
-                else { return 0 }
+            do { return try receive(minimum: 1) }
+            catch let e {
+                SysLog.error("\(e)")
+                return []
             }
-            guard n>=0 else { return [] }
-            return Array(data.prefix(n))
         }
         set {
-            newValue.withUnsafeBytes { ptr in
-                guard let raw = ptr.baseAddress else { return }
-                _ = write(fd, raw, newValue.count)
-            }
+            do { try send(newValue) }
+            catch let e { SysLog.error("\(e)") }
         }
     }
     
-    public func incoming(minimum: Int = 1, maximum : Int = 256) throws -> [UInt8] {
+    public func receive(minimum: Int = 1, maximum : Int = 256) throws -> [UInt8] {
         var data = Array<UInt8>(repeating: 0, count: maximum)
         let n : Int = try data.withUnsafeMutableBytes { ptr in
             if let raw = ptr.baseAddress {
@@ -90,26 +87,35 @@ public class Connection {
         return Array(data.prefix(n))
     }
     
-    public func out(_ s : String) throws {
-        var t = s
-        try t.withUTF8 { ptr in
-            guard let p = ptr.baseAddress else { return }
-            let raw = UnsafeRawPointer(p)
-            try wwrite(fd, raw, ptr.count)
+    @discardableResult public func send(_ b : [UInt8]) throws -> Int {
+        return try b.withUnsafeBytes { ptr in
+            guard let raw = ptr.baseAddress else { throw SerialError(kIOReturnNoSpace) }
+            return write(fd, raw, b.count)
         }
     }
     
-    public func listen(_  cb : @escaping ([UInt8]) -> ()) {
+    @discardableResult public func send(_ s : String) throws -> Int {
+        var t = s
+        return try t.withUTF8 { ptr in
+            guard let p = ptr.baseAddress else { throw SerialError(kIOReturnNoSpace) }
+            let raw = UnsafeRawPointer(p)
+            return try wwrite(fd, raw, ptr.count)
+        }
+    }
+    
+    public func listen(minimum: Int = 1, maximum : Int = 256) {
+        guard let delegate = self.delegate else { return }
         listening=true
-        DispatchQueue.init(label: "serial").async {
+        DispatchQueue.init(label: "serial\(port.name ?? "COM")", qos: .userInteractive).async {
             while true {
                 if !self.listening { return }
-                let b=self.bytes
-                if b.count>0 { cb(b) }
+                do {
+                    let b=try self.receive(minimum: minimum, maximum: maximum)
+                    if b.count>0 { delegate.receivedBytes(b) }
+                }
+                catch let e as BaseError { delegate.receivedError(e) }
+                catch let e { SysLog.error("\(e)") }
             }
         }
     }
-    
-    
-    
 }

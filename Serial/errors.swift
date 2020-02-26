@@ -8,42 +8,76 @@
 
 import Foundation
 
-public class SerialError : Error {
-    
-    public private(set) var message : String
-    public private(set) var code : IOReturn
-    
-    public init(_ code : IOReturn) {
-        self.code=code
-        if let cstr = mach_error_string(code) {
-            self.message = String(cString: cstr)
-        }
-        else { self.message = "-" }
+extension IOReturn {
+    var error : String? {
+        guard let cstr = mach_error_string(self) else { return nil }
+        return String(cString: cstr)
     }
-    
-    static func wrap(_ code : IOReturn) throws {
-        guard code != kIOReturnSuccess else { return }
-        throw SerialError(code)
+}
+extension timeval {
+    static func now() -> timeval {
+        var time = timeval()
+        gettimeofday(&time, nil)
+        return time
     }
 }
 
-public class POSIXError : Error {
+public protocol BaseError : Error, CustomStringConvertible {
+    
+    var message : String { get }
+    var code : Int32 { get }
+    var localizedDescription : String { get }
+    var time : timeval { get }
+    
+    init(_ : Int32)
+    
+    static var success : Int32 { get }
+    static var className : String { get }
+    @discardableResult static func wrap(_ : Int32) throws -> Int32
+}
+extension BaseError {
+    
+    @discardableResult public static func wrap(_ code : Int32) throws -> Int32 {
+        guard code != Self.success else { return code }
+        throw Self(code)
+    }
+    
+    public static var className : String { String(describing: Self.self) }
+    public var description: String {"\(Self.className) error \(code): \(message)"}
+    public var localizedDescription: String { description }
+}
+
+public class SerialError : BaseError {
     
     public private(set) var message : String
-    public private(set) var code : POSIXError
-     
-    public init(_ code : errno_t) {
-        self.code=POSIXError(code)
-        self.message=self.code.message
+    public private(set) var code : IOReturn
+    public private(set) var time : timeval
+    
+    public static let success = kIOReturnSuccess
+    
+    public required init(_ code : IOReturn) {
+        self.code=code
+        self.message=code.error ?? ""
+        self.time=timeval.now()
     }
+}
+
+public class POSIXException : BaseError {
+    
+    public private(set) var message : String
+    public private(set) var code : errno_t
+    public private(set) var time : timeval
+    
+    public static let success : errno_t = -1
      
-    @discardableResult static func wrap(_ code : Int32) throws -> Int32 {
-        guard code == -1 else { return code }
-        throw POSIXError(errno)
-     }
-    @discardableResult static func wrap(_ code : Int) throws -> Int {
-       guard code == -1 else { return code }
-       throw POSIXError(errno)
+    public required init(_ code : errno_t) {
+        let io : IOReturn = numericCast(code+100000)
+        self.message=io.error ?? ""
+        self.code=code
+        self.time=timeval.now()
+    }
+    public static func wrapInt(_ code : Int) throws -> Int {
+        return try numericCast(wrap(numericCast(code)))
     }
 }
 
