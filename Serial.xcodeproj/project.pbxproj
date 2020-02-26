@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		E1B6BAEF2400831200E74308 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAEE2400831200E74308 /* main.swift */; };
+		E1B6BAF72400833000E74308 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B6BAF62400833000E74308 /* IOKit.framework */; };
+		E1B6BAF9240084D300E74308 /* ports.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAF8240084D300E74308 /* ports.swift */; };
+		E1B6BAFB2402FC7300E74308 /* errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAFA2402FC7300E74308 /* errors.swift */; };
+		E1B6BAFD2402FD6100E74308 /* port.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAFC2402FD6100E74308 /* port.swift */; };
+		E1B6BAFF2403035F00E74308 /* connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAFE2403035F00E74308 /* connection.swift */; };
+		E1B6BB012405FB0D00E74308 /* posix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB002405FB0D00E74308 /* posix.swift */; };
+		E1B6BB032405FBA200E74308 /* termios.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB022405FBA200E74308 /* termios.swift */; };
+		E1B6BB052405FBEF00E74308 /* parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB042405FBEF00E74308 /* parameters.swift */; };
+		E1B6BB072405FC4000E74308 /* flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB062405FC4000E74308 /* flags.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +34,15 @@
 /* Begin PBXFileReference section */
 		E1B6BAEB2400831200E74308 /* Serial */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Serial; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B6BAEE2400831200E74308 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E1B6BAF62400833000E74308 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		E1B6BAF8240084D300E74308 /* ports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ports.swift; sourceTree = "<group>"; };
+		E1B6BAFA2402FC7300E74308 /* errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errors.swift; sourceTree = "<group>"; };
+		E1B6BAFC2402FD6100E74308 /* port.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = port.swift; sourceTree = "<group>"; };
+		E1B6BAFE2403035F00E74308 /* connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connection.swift; sourceTree = "<group>"; };
+		E1B6BB002405FB0D00E74308 /* posix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = posix.swift; sourceTree = "<group>"; };
+		E1B6BB022405FBA200E74308 /* termios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = termios.swift; sourceTree = "<group>"; };
+		E1B6BB042405FBEF00E74308 /* parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parameters.swift; sourceTree = "<group>"; };
+		E1B6BB062405FC4000E74308 /* flags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flags.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B6BAF72400833000E74308 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +62,7 @@
 			children = (
 				E1B6BAED2400831200E74308 /* Serial */,
 				E1B6BAEC2400831200E74308 /* Products */,
+				E1B6BAF52400833000E74308 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +77,41 @@
 		E1B6BAED2400831200E74308 /* Serial */ = {
 			isa = PBXGroup;
 			children = (
+				E1B6BB082405FC7F00E74308 /* ConnectionParameters */,
 				E1B6BAEE2400831200E74308 /* main.swift */,
+				E1B6BAF8240084D300E74308 /* ports.swift */,
+				E1B6BAFA2402FC7300E74308 /* errors.swift */,
+				E1B6BAFC2402FD6100E74308 /* port.swift */,
+				E1B6BB092405FCB400E74308 /* Connections */,
 			);
 			path = Serial;
+			sourceTree = "<group>";
+		};
+		E1B6BAF52400833000E74308 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1B6BAF62400833000E74308 /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1B6BB082405FC7F00E74308 /* ConnectionParameters */ = {
+			isa = PBXGroup;
+			children = (
+				E1B6BB022405FBA200E74308 /* termios.swift */,
+				E1B6BB042405FBEF00E74308 /* parameters.swift */,
+				E1B6BB062405FC4000E74308 /* flags.swift */,
+			);
+			path = ConnectionParameters;
+			sourceTree = "<group>";
+		};
+		E1B6BB092405FCB400E74308 /* Connections */ = {
+			isa = PBXGroup;
+			children = (
+				E1B6BAFE2403035F00E74308 /* connection.swift */,
+				E1B6BB002405FB0D00E74308 /* posix.swift */,
+			);
+			path = Connections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +172,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B6BAF9240084D300E74308 /* ports.swift in Sources */,
 				E1B6BAEF2400831200E74308 /* main.swift in Sources */,
+				E1B6BAFF2403035F00E74308 /* connection.swift in Sources */,
+				E1B6BB012405FB0D00E74308 /* posix.swift in Sources */,
+				E1B6BAFD2402FD6100E74308 /* port.swift in Sources */,
+				E1B6BAFB2402FC7300E74308 /* errors.swift in Sources */,
+				E1B6BB072405FC4000E74308 /* flags.swift in Sources */,
+				E1B6BB032405FBA200E74308 /* termios.swift in Sources */,
+				E1B6BB052405FBEF00E74308 /* parameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
