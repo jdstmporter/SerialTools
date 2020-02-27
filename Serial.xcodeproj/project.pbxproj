@@ -7,17 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D796FC44DBB8581E9DD44E2 /* Pods_serialtool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C07678D6D5C71CF035718F1 /* Pods_serialtool.framework */; };
 		E1B6BAEF2400831200E74308 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAEE2400831200E74308 /* main.swift */; };
 		E1B6BAF72400833000E74308 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B6BAF62400833000E74308 /* IOKit.framework */; };
-		E1B6BAF9240084D300E74308 /* ports.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAF8240084D300E74308 /* ports.swift */; };
-		E1B6BAFB2402FC7300E74308 /* errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAFA2402FC7300E74308 /* errors.swift */; };
-		E1B6BAFD2402FD6100E74308 /* port.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAFC2402FD6100E74308 /* port.swift */; };
-		E1B6BAFF2403035F00E74308 /* connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAFE2403035F00E74308 /* connection.swift */; };
-		E1B6BB012405FB0D00E74308 /* posix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB002405FB0D00E74308 /* posix.swift */; };
-		E1B6BB032405FBA200E74308 /* termios.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB022405FBA200E74308 /* termios.swift */; };
-		E1B6BB052405FBEF00E74308 /* parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB042405FBEF00E74308 /* parameters.swift */; };
-		E1B6BB072405FC4000E74308 /* flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB062405FC4000E74308 /* flags.swift */; };
-		E1B6BB0B2406F41B00E74308 /* logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB0A2406F41B00E74308 /* logging.swift */; };
 		E1BFB51824073A5400196A02 /* termios.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB022405FBA200E74308 /* termios.swift */; };
 		E1BFB51924073A5800196A02 /* parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB042405FBEF00E74308 /* parameters.swift */; };
 		E1BFB51A24073A5C00196A02 /* flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB062405FC4000E74308 /* flags.swift */; };
@@ -43,7 +35,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E1B6BAEB2400831200E74308 /* Serial */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Serial; sourceTree = BUILT_PRODUCTS_DIR; };
+		54F63EC4AEDBE9ABA963EF1E /* Pods-serialtool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-serialtool.release.xcconfig"; path = "Target Support Files/Pods-serialtool/Pods-serialtool.release.xcconfig"; sourceTree = "<group>"; };
+		7C07678D6D5C71CF035718F1 /* Pods_serialtool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_serialtool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E16F765124087007006C5FC8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E1B6BAEB2400831200E74308 /* serialtool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = serialtool; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B6BAEE2400831200E74308 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		E1B6BAF62400833000E74308 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		E1B6BAF8240084D300E74308 /* ports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ports.swift; sourceTree = "<group>"; };
@@ -55,12 +50,12 @@
 		E1B6BB042405FBEF00E74308 /* parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parameters.swift; sourceTree = "<group>"; };
 		E1B6BB062405FC4000E74308 /* flags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flags.swift; sourceTree = "<group>"; };
 		E1B6BB0A2406F41B00E74308 /* logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logging.swift; sourceTree = "<group>"; };
-		E1BFB51024073A4500196A02 /* SerialFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SerialFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1BFB51324073A4500196A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1BFB51024073A4500196A02 /* SerialPort.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SerialPort.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1BFB51324073A4500196A02 /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
 		E1BFB53624073CFA00196A02 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E1BFB53824073CFA00196A02 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		E1BFB55A24074BA700196A02 /* SerialTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialTests.swift; sourceTree = "<group>"; };
-		E1BFB55B24074BA700196A02 /* XCTestManifests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		E1ED200724086AAC0019E8AE /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E1ED200824086D360019E8AE /* SerialPort.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SerialPort.podspec; sourceTree = "<group>"; };
+		EB20FE403306CD8BB18A6E9E /* Pods-serialtool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-serialtool.debug.xcconfig"; path = "Target Support Files/Pods-serialtool/Pods-serialtool.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1B6BAF72400833000E74308 /* IOKit.framework in Frameworks */,
+				6D796FC44DBB8581E9DD44E2 /* Pods_serialtool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,40 +79,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07B788BF7C6E7076BF952EFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB20FE403306CD8BB18A6E9E /* Pods-serialtool.debug.xcconfig */,
+				54F63EC4AEDBE9ABA963EF1E /* Pods-serialtool.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E1B6BAE22400831200E74308 = {
 			isa = PBXGroup;
 			children = (
-				E1B6BAED2400831200E74308 /* Serial */,
-				E1BFB51124073A4500196A02 /* SerialFramework */,
+				E16F765124087007006C5FC8 /* LICENSE */,
+				E1ED200824086D360019E8AE /* SerialPort.podspec */,
+				E1ED200724086AAC0019E8AE /* Podfile */,
+				E1BFB53624073CFA00196A02 /* README.md */,
+				E1BFB55E24074BFA00196A02 /* Example */,
+				E1B6BAED2400831200E74308 /* SerialPort */,
 				E1B6BAEC2400831200E74308 /* Products */,
 				E1B6BAF52400833000E74308 /* Frameworks */,
+				07B788BF7C6E7076BF952EFF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		E1B6BAEC2400831200E74308 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E1B6BAEB2400831200E74308 /* Serial */,
-				E1BFB51024073A4500196A02 /* SerialFramework.framework */,
+				E1B6BAEB2400831200E74308 /* serialtool */,
+				E1BFB51024073A4500196A02 /* SerialPort.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E1B6BAED2400831200E74308 /* Serial */ = {
+		E1B6BAED2400831200E74308 /* SerialPort */ = {
 			isa = PBXGroup;
 			children = (
-				E1BFB55E24074BFA00196A02 /* Tests */,
-				E1BFB55824074B0F00196A02 /* Sources */,
-				E1BFB53824073CFA00196A02 /* Package.swift */,
-				E1BFB53624073CFA00196A02 /* README.md */,
+				E1BFB51324073A4500196A02 /* Framework-Info.plist */,
+				E1BFB55824074B0F00196A02 /* src */,
 			);
-			path = Serial;
+			path = SerialPort;
 			sourceTree = "<group>";
 		};
 		E1B6BAF52400833000E74308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				E1B6BAF62400833000E74308 /* IOKit.framework */,
+				7C07678D6D5C71CF035718F1 /* Pods_serialtool.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,18 +149,6 @@
 			path = Connections;
 			sourceTree = "<group>";
 		};
-		E1BFB5072407396A00196A02 /* Serial */ = {
-			isa = PBXGroup;
-			children = (
-				E1B6BAEE2400831200E74308 /* main.swift */,
-				E1B6BB082405FC7F00E74308 /* ConnectionParameters */,
-				E1BFB509240739A000196A02 /* Devices */,
-				E1BFB50A240739BC00196A02 /* util */,
-				E1B6BB092405FCB400E74308 /* Connections */,
-			);
-			path = Serial;
-			sourceTree = "<group>";
-		};
 		E1BFB509240739A000196A02 /* Devices */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,38 +167,23 @@
 			path = util;
 			sourceTree = "<group>";
 		};
-		E1BFB51124073A4500196A02 /* SerialFramework */ = {
+		E1BFB55824074B0F00196A02 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				E1BFB51324073A4500196A02 /* Info.plist */,
+				E1B6BB082405FC7F00E74308 /* ConnectionParameters */,
+				E1BFB509240739A000196A02 /* Devices */,
+				E1BFB50A240739BC00196A02 /* util */,
+				E1B6BB092405FCB400E74308 /* Connections */,
 			);
-			path = SerialFramework;
+			path = src;
 			sourceTree = "<group>";
 		};
-		E1BFB55824074B0F00196A02 /* Sources */ = {
+		E1BFB55E24074BFA00196A02 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				E1BFB5072407396A00196A02 /* Serial */,
+				E1B6BAEE2400831200E74308 /* main.swift */,
 			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		E1BFB55924074BA700196A02 /* SerialTests */ = {
-			isa = PBXGroup;
-			children = (
-				E1BFB55A24074BA700196A02 /* SerialTests.swift */,
-				E1BFB55B24074BA700196A02 /* XCTestManifests.swift */,
-			);
-			name = SerialTests;
-			path = Serial/Tests/SerialTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		E1BFB55E24074BFA00196A02 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				E1BFB55924074BA700196A02 /* SerialTests */,
-			);
-			path = Tests;
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,10 +199,11 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E1B6BAEA2400831200E74308 /* Serial */ = {
+		E1B6BAEA2400831200E74308 /* serialtool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1B6BAF22400831200E74308 /* Build configuration list for PBXNativeTarget "Serial" */;
+			buildConfigurationList = E1B6BAF22400831200E74308 /* Build configuration list for PBXNativeTarget "serialtool" */;
 			buildPhases = (
+				50E8DA23FE650192E28FF1B4 /* [CP] Check Pods Manifest.lock */,
 				E1B6BAE72400831200E74308 /* Sources */,
 				E1B6BAE82400831200E74308 /* Frameworks */,
 				E1B6BAE92400831200E74308 /* CopyFiles */,
@@ -229,14 +212,14 @@
 			);
 			dependencies = (
 			);
-			name = Serial;
+			name = serialtool;
 			productName = Serial;
-			productReference = E1B6BAEB2400831200E74308 /* Serial */;
+			productReference = E1B6BAEB2400831200E74308 /* serialtool */;
 			productType = "com.apple.product-type.tool";
 		};
-		E1BFB50F24073A4400196A02 /* SerialFramework */ = {
+		E1BFB50F24073A4400196A02 /* SerialPort */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1BFB51524073A4500196A02 /* Build configuration list for PBXNativeTarget "SerialFramework" */;
+			buildConfigurationList = E1BFB51524073A4500196A02 /* Build configuration list for PBXNativeTarget "SerialPort" */;
 			buildPhases = (
 				E1BFB50B24073A4400196A02 /* Headers */,
 				E1BFB50C24073A4400196A02 /* Sources */,
@@ -247,9 +230,9 @@
 			);
 			dependencies = (
 			);
-			name = SerialFramework;
+			name = SerialPort;
 			productName = SerialFramework;
-			productReference = E1BFB51024073A4500196A02 /* SerialFramework.framework */;
+			productReference = E1BFB51024073A4500196A02 /* SerialPort.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -283,8 +266,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E1B6BAEA2400831200E74308 /* Serial */,
-				E1BFB50F24073A4400196A02 /* SerialFramework */,
+				E1B6BAEA2400831200E74308 /* serialtool */,
+				E1BFB50F24073A4400196A02 /* SerialPort */,
 			);
 		};
 /* End PBXProject section */
@@ -299,21 +282,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		50E8DA23FE650192E28FF1B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-serialtool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E1B6BAE72400831200E74308 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1B6BAF9240084D300E74308 /* ports.swift in Sources */,
 				E1B6BAEF2400831200E74308 /* main.swift in Sources */,
-				E1B6BAFF2403035F00E74308 /* connection.swift in Sources */,
-				E1B6BB012405FB0D00E74308 /* posix.swift in Sources */,
-				E1B6BAFD2402FD6100E74308 /* port.swift in Sources */,
-				E1B6BAFB2402FC7300E74308 /* errors.swift in Sources */,
-				E1B6BB072405FC4000E74308 /* flags.swift in Sources */,
-				E1B6BB0B2406F41B00E74308 /* logging.swift in Sources */,
-				E1B6BB032405FBA200E74308 /* termios.swift in Sources */,
-				E1B6BB052405FBEF00E74308 /* parameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +450,7 @@
 		};
 		E1B6BAF32400831200E74308 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB20FE403306CD8BB18A6E9E /* Pods-serialtool.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XLKATCU397;
@@ -462,6 +462,7 @@
 		};
 		E1B6BAF42400831200E74308 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54F63EC4AEDBE9ABA963EF1E /* Pods-serialtool.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XLKATCU397;
@@ -484,7 +485,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = c11;
-				INFOPLIST_FILE = SerialFramework/Info.plist;
+				INFOPLIST_FILE = "Framework-info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -514,7 +515,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = c11;
-				INFOPLIST_FILE = SerialFramework/Info.plist;
+				INFOPLIST_FILE = "Framework-info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -543,7 +544,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1B6BAF22400831200E74308 /* Build configuration list for PBXNativeTarget "Serial" */ = {
+		E1B6BAF22400831200E74308 /* Build configuration list for PBXNativeTarget "serialtool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1B6BAF32400831200E74308 /* Debug */,
@@ -552,7 +553,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1BFB51524073A4500196A02 /* Build configuration list for PBXNativeTarget "SerialFramework" */ = {
+		E1BFB51524073A4500196A02 /* Build configuration list for PBXNativeTarget "SerialPort" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1BFB51624073A4500196A02 /* Debug */,

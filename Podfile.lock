@@ -1,0 +1,16 @@
+PODS:
+  - ArgumentParserKit (1.0.0)
+
+DEPENDENCIES:
+  - ArgumentParserKit (~> 1.0.0)
+
+SPEC REPOS:
+  trunk:
+    - ArgumentParserKit
+
+SPEC CHECKSUMS:
+  ArgumentParserKit: 99ceb746098d9f478a6cb9b01b38ce9ecab3122d
+
+PODFILE CHECKSUM: 961e29ad13d9c1483da073e91dc1561292f9faae
+
+COCOAPODS: 1.8.4
