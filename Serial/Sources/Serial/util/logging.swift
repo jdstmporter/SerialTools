@@ -30,10 +30,10 @@ public class SysLog {
     public func logCanLog(type: OSLogType) -> Bool {
         return self.log.isEnabled(type: type)
     }
-    public var signposted : Bool { self.log.signpostsEnabled }
+    public var signposted : Bool { log.signpostsEnabled }
     
     private func record(level: OSLogType,_ obj : CustomStringConvertible) {
-        os_log(level, log: self.log, SysLog.objectFormat, obj.description)
+        os_log(level, log: log, SysLog.objectFormat, obj.description)
     }
     
     private static var the : SysLog = SysLog()

@@ -35,9 +35,9 @@ public class SerialPort : CustomStringConvertible, CustomDebugStringConvertible,
     }
     
     
-    public var name : String? { return self[kIOTTYDeviceKey] }
-    public var inbound : String? { return self[kIODialinDeviceKey] }
-    public var outbound : String? { return self[kIOCalloutDeviceKey] }
+    public var name : String? { self[kIOTTYDeviceKey] }
+    public var inbound : String? { self[kIODialinDeviceKey] }
+    public var outbound : String? { self[kIOCalloutDeviceKey] }
     
     public func isBusy() throws -> Bool {
         var state : UInt32 = 0
@@ -60,18 +60,14 @@ public class SerialPort : CustomStringConvertible, CustomDebugStringConvertible,
     
     // Sequence methods
     
-    public subscript<T>(_ key : String) -> T? { return self.attributes[key] as? T }
-    public var count : Int { return self.attributes.count }
-    public __consuming func makeIterator() -> Dictionary<String, Any>.Iterator { return attributes.makeIterator() }
+    public subscript<T>(_ key : String) -> T? { attributes[key] as? T }
+    public var count : Int { attributes.count }
+    public __consuming func makeIterator() -> Dictionary<String, Any>.Iterator { attributes.makeIterator() }
     
     // Custom string convertible methods
     
-    public var description: String {
-        return name ?? ""
-    }
-    public var debugDescription: String {
-        return "Port \(name ?? "-") with device file \(outbound ?? "")"
-    }
+    public var description: String { name ?? "" }
+    public var debugDescription: String { "Port \(name ?? "-") with device file \(outbound ?? "")" }
     
     
 }

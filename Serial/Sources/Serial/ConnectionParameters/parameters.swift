@@ -24,9 +24,7 @@ extension Int32 {
 extension SimpleSerialParameter {
     
     public var mask : UInt { numericCast(Self.convert[self] ?? 0) }
-    public func apply(_ word : UInt) -> UInt {
-        return (word & ~numericCast(Self.MASK)) | self.mask
-    }
+    public func apply(_ word : UInt) -> UInt { (word & ~numericCast(Self.MASK)) | self.mask }
 }
     
 
@@ -54,11 +52,7 @@ extension SerialParameter {
         self=v
     }
     
-    public static func ==(_ l : Self, _ r : Self) -> Bool {
-        return l.value == r.value
-    }
-    public static func !=(_ l : Self, _ r : Self) -> Bool {
-        return l.value != r.value
-    }
+    public static func ==(_ l : Self, _ r : Self) -> Bool { l.value == r.value }
+    public static func !=(_ l : Self, _ r : Self) -> Bool { l.value != r.value }
     public var hashValue: Int { self.rawValue }
 }

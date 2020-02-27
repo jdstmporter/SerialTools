@@ -160,7 +160,6 @@ public struct SerialFlags {
     
     
     public func apply(_ term : inout termios) {
-        
         cfsetspeed(&term, rate.mask)
         
         switch flowControl {
@@ -198,9 +197,6 @@ public struct SerialFlags {
         if parity != .None {
             term.c_iflag |= numericCast(INPCK | ISTRIP)
         }
-        
- 
-        
     }
     
     public func apply(port fd : Int32) throws {
@@ -213,7 +209,7 @@ public struct SerialFlags {
         tcsetattr(fd, TCSANOW, &term)
         
         let flag = blocking ? 0 : FNDELAY
-        try wfcntl(fd, F_SETFL, flag);
+        try wfcntl(fd, F_SETFL, flag)
     }
 }
 

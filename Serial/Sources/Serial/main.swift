@@ -13,23 +13,20 @@ enum Errors : Error {
 }
 
 class Delegate : ConnectionDelegate {
-    func receivedBytes(_ bytes: [UInt8]) {
-        let s = String(bytes: bytes, encoding: .ascii) ?? "-"
-        print("Got \(s)")
+    func received(_ rcv: Result<[UInt8],BaseError>) {
+        switch rcv {
+        case .success(let bytes):
+            let s = String(bytes: bytes, encoding: .ascii) ?? "-"
+            print("Got \(s)")
+        case .failure(let e):
+            print("Error : \(e)")
+            SysLog.error(e)
+        }
     }
-    
-    func receivedError(_ e: BaseError) {
-        print("Error : \(e)")
-        SysLog.error(e)
-    }
-    
-    
-    
-    
 }
 
 do {
-    let s = try IOSystem()
+    let s = try SerialPorts()
     s.enumerated().forEach { kv in
         let port = kv.element
         print("Port \(kv.offset) : \(port)")

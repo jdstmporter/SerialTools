@@ -12,7 +12,7 @@ import IOKit.serial
 
 public typealias IOObject = io_object_t
 
-public class IOSystem : Sequence {
+public class SerialPorts : Sequence {
     public typealias Port = mach_port_t
     public typealias Iterator = Array<SerialPort>.Iterator
     
@@ -27,7 +27,7 @@ public class IOSystem : Sequence {
     }
     
     public var count : Int { ports.count }
-    public func makeIterator() -> Iterator { return ports.makeIterator() }
+    public func makeIterator() -> Iterator { ports.makeIterator() }
     public subscript(_ n : Int) -> SerialPort { ports[n] }
     public subscript(_ name : String) -> SerialPort? { ports.first { $0.name == name } }
     
@@ -43,4 +43,6 @@ public class IOSystem : Sequence {
         }
         self.ports=ports
     }
+    
+    public static func scan() throws -> SerialPorts { try SerialPorts() }
 }

@@ -10,16 +10,8 @@ import Foundation
 import IOKit
 import IOKit.serial
 
-
-
-public typealias SerialFlag = (c:UInt, i:UInt, o:UInt)
-
-
 public protocol ConnectionDelegate {
-    
-    func receivedBytes(_ : [UInt8])
-    func receivedError(_ : BaseError)
-    
+    func received(_ : Result<[UInt8],BaseError>)
 }
 
 
@@ -39,8 +31,6 @@ public class Connection {
         }
         self.path=path
     }
-    
-    
     
     public func connect(flags : SerialFlags) throws {
         if try port.isBusy() { throw SerialError(kIOReturnBusy) }
@@ -111,9 +101,9 @@ public class Connection {
                 if !self.listening { return }
                 do {
                     let b=try self.receive(minimum: minimum, maximum: maximum)
-                    if b.count>0 { delegate.receivedBytes(b) }
+                    if b.count>0 { delegate.received(.success(b)) }
                 }
-                catch let e as BaseError { delegate.receivedError(e) }
+                catch let e as BaseError { delegate.received(.failure(e)) }
                 catch let e { SysLog.error("\(e)") }
             }
         }
