@@ -9,5 +9,5 @@ target 'serialtool' do
     }
     use_frameworks!
     pod 'ArgumentParserKit', '~> 1.0.0'
-    #pod 'ColourWheel', :path => '.'
+    pod 'SerialPort', :path => '.'
 end

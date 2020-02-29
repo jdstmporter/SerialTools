@@ -18,33 +18,53 @@ public protocol ConnectionDelegate {
 public class Connection {
     
     private let port : SerialPort
+    private let flags : SerialFlags
     private let path : String
     private var fd : Int32 = -1
-    private var listening : Bool = false
-    private var minimum : Int = 0
+    private var listening : BooleanFlag
+    private var waitForBytes : Int
+    private var bufferSize : Int
     public var delegate : ConnectionDelegate?
     
-    public init(_ port : SerialPort) throws  {
+    public init(port : SerialPort, flags : SerialFlags, waitForBytes : Int = 1, bufferSize : Int = 256) throws  {
+        self.listening = BooleanFlag()
+        self.waitForBytes = waitForBytes
+        self.bufferSize = bufferSize
+        self.flags = flags
         self.port=port
-        guard let path = port.outbound else {
-            throw SerialError(kIOReturnNoDevice)
-        }
+        guard let path = port.outbound else { throw SerialError(kIOReturnNoDevice) }
         self.path=path
     }
+    public var name : String? { port.name }
+    private var queueName : String { "__Serial_Port_\(name ?? "port")_Queue" }
     
-    public func connect(flags : SerialFlags) throws {
+    internal func listen() {
+        guard let delegate = self.delegate else { return }
+        listening.set()
+        DispatchQueue.init(label: "serial\(port.name ?? "COM")", qos: .userInteractive).async {
+            while self.listening.isSet {
+                do {
+                    let b=try self.receive()
+                    if b.count>0 { delegate.received(.success(b)) }
+                }
+                catch let e as BaseError { delegate.received(.failure(e)) }
+                catch let e { SysLog.error("\(e)") }
+            }
+        }
+    }
+    
+    public func connect(async : Bool) throws {
         if try port.isBusy() { throw SerialError(kIOReturnBusy) }
         self.fd = try path.withCString { try wopen($0, O_RDWR | O_NOCTTY | O_NDELAY) }
         if self.fd<0 { throw SerialError(kIOReturnNotOpen) }
          
         // apply serial flags
-        
         try flags.apply(port: self.fd)
-        //self.minimum = flags.minimumRead
+        if async { self.listen() }
     }
     
     public func disconnect() throws {
-        listening=false
+        listening.clear()
         try wclose(self.fd)
     }
     
@@ -54,7 +74,7 @@ public class Connection {
     
     public var bytes : [UInt8] {
         get {
-            do { return try receive(minimum: 1) }
+            do { return try receive() }
             catch let e {
                 SysLog.error("\(e)")
                 return []
@@ -66,11 +86,11 @@ public class Connection {
         }
     }
     
-    public func receive(minimum: Int = 1, maximum : Int = 256) throws -> [UInt8] {
-        var data = Array<UInt8>(repeating: 0, count: maximum)
+    public func receive() throws -> [UInt8] {
+        var data = Array<UInt8>(repeating: 0, count: bufferSize)
         let n : Int = try data.withUnsafeMutableBytes { ptr in
             if let raw = ptr.baseAddress {
-                return try wread(fd, raw, minimum)
+                return try wread(fd, raw, waitForBytes)
             }
             else { return 0 }
         }
@@ -93,19 +113,6 @@ public class Connection {
         }
     }
     
-    public func listen(minimum: Int = 1, maximum : Int = 256) {
-        guard let delegate = self.delegate else { return }
-        listening=true
-        DispatchQueue.init(label: "serial\(port.name ?? "COM")", qos: .userInteractive).async {
-            while true {
-                if !self.listening { return }
-                do {
-                    let b=try self.receive(minimum: minimum, maximum: maximum)
-                    if b.count>0 { delegate.received(.success(b)) }
-                }
-                catch let e as BaseError { delegate.received(.failure(e)) }
-                catch let e { SysLog.error("\(e)") }
-            }
-        }
-    }
+    
 }
+

@@ -1,0 +1,6 @@
+framework module SerialPort {
+  umbrella header "SerialPort-umbrella.h"
+
+  export *
+  module * { export * }
+}

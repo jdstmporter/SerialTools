@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D796FC44DBB8581E9DD44E2 /* Pods_serialtool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C07678D6D5C71CF035718F1 /* Pods_serialtool.framework */; };
+		E16F76552409DEEC006C5FC8 /* atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76542409DEEC006C5FC8 /* atomic.swift */; };
 		E1B6BAEF2400831200E74308 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAEE2400831200E74308 /* main.swift */; };
 		E1B6BAF72400833000E74308 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B6BAF62400833000E74308 /* IOKit.framework */; };
 		E1BFB51824073A5400196A02 /* termios.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB022405FBA200E74308 /* termios.swift */; };
@@ -38,6 +39,7 @@
 		54F63EC4AEDBE9ABA963EF1E /* Pods-serialtool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-serialtool.release.xcconfig"; path = "Target Support Files/Pods-serialtool/Pods-serialtool.release.xcconfig"; sourceTree = "<group>"; };
 		7C07678D6D5C71CF035718F1 /* Pods_serialtool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_serialtool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16F765124087007006C5FC8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E16F76542409DEEC006C5FC8 /* atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atomic.swift; sourceTree = "<group>"; };
 		E1B6BAEB2400831200E74308 /* serialtool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = serialtool; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B6BAEE2400831200E74308 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		E1B6BAF62400833000E74308 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -95,7 +97,6 @@
 				E1ED200824086D360019E8AE /* SerialPort.podspec */,
 				E1ED200724086AAC0019E8AE /* Podfile */,
 				E1BFB53624073CFA00196A02 /* README.md */,
-				E1BFB55E24074BFA00196A02 /* Example */,
 				E1B6BAED2400831200E74308 /* SerialPort */,
 				E1B6BAEC2400831200E74308 /* Products */,
 				E1B6BAF52400833000E74308 /* Frameworks */,
@@ -115,6 +116,7 @@
 		E1B6BAED2400831200E74308 /* SerialPort */ = {
 			isa = PBXGroup;
 			children = (
+				E1B6BAEE2400831200E74308 /* main.swift */,
 				E1BFB51324073A4500196A02 /* Framework-Info.plist */,
 				E1BFB55824074B0F00196A02 /* src */,
 			);
@@ -163,6 +165,7 @@
 			children = (
 				E1B6BB0A2406F41B00E74308 /* logging.swift */,
 				E1B6BAFA2402FC7300E74308 /* errors.swift */,
+				E16F76542409DEEC006C5FC8 /* atomic.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -176,14 +179,6 @@
 				E1B6BB092405FCB400E74308 /* Connections */,
 			);
 			path = src;
-			sourceTree = "<group>";
-		};
-		E1BFB55E24074BFA00196A02 /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				E1B6BAEE2400831200E74308 /* main.swift */,
-			);
-			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +323,7 @@
 				E1BFB51B24073A6300196A02 /* ports.swift in Sources */,
 				E1BFB52024073A7500196A02 /* posix.swift in Sources */,
 				E1BFB51924073A5800196A02 /* parameters.swift in Sources */,
+				E16F76552409DEEC006C5FC8 /* atomic.swift in Sources */,
 				E1BFB51D24073A6A00196A02 /* logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

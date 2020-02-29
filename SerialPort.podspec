@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint ColourWheel.podspec' to ensure this is a
+# Be sure to run `pod lib lint SerialPort.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -23,18 +23,16 @@ A swift colour picker widget for swift 5 in iOS 12.0 and later.  It is an extend
 of the Objective-C library at https://github.com/justinmeiners/ios-color-wheel.
                        DESC
 
-  s.homepage         = 'https://github.com/jdstmporter/blob.git'
+  s.homepage         = 'https://github.com/jdstmporter/SerialTools.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'jdstmporter' => 'julian@porternet.org.uk' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform = :macos
-  s.ios.deployment_target = '10.15'
+  s.platform = :osx, '10.15'
 
-  s.source = { :git => 'https://github.com/jdstmporter/blob.git', :tag => "#{s.version}" }
-  s.source_files = 'SerialPort/src/*.{swift}'
-  s.frameworks   = 'IOKit'
+  s.source = { :git => 'https://github.com/jdstmporter/SerialTools.git', :tag => "#{s.version}" }
+  s.source_files = 'SerialPort/src/*/*.{swift}'
   
   # s.resource_bundles = {
   #   'ColourWheel' => ['ColourWheel/Assets/*.png']
@@ -42,7 +40,7 @@ of the Objective-C library at https://github.com/justinmeiners/ios-color-wheel.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+
 end
 
 

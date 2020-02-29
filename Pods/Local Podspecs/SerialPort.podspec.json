@@ -1,0 +1,24 @@
+{
+  "name": "SerialPort",
+  "version": "0.1.0",
+  "summary": "A simple swift framework for accessing serial ports.",
+  "swift_versions": "5",
+  "description": "A swift colour picker widget for swift 5 in iOS 12.0 and later.  It is an extended fork\nof the Objective-C library at https://github.com/justinmeiners/ios-color-wheel.",
+  "homepage": "https://github.com/jdstmporter/SerialTools.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jdstmporter": "julian@porternet.org.uk"
+  },
+  "platforms": {
+    "osx": "10.15"
+  },
+  "source": {
+    "git": "https://github.com/jdstmporter/SerialTools.git",
+    "tag": "0.1.0"
+  },
+  "source_files": "SerialPort/src/*/*.{swift}",
+  "swift_version": "5"
+}

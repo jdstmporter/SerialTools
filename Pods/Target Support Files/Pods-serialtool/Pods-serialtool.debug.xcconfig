@@ -1,10 +1,10 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ArgumentParserKit"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ArgumentParserKit" "${PODS_CONFIGURATION_BUILD_DIR}/SerialPort"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ArgumentParserKit/ArgumentParserKit.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ArgumentParserKit/ArgumentParserKit.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SerialPort/SerialPort.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_CONFIGURATION_BUILD_DIR}/ArgumentParserKit/ArgumentParserKit.framework/Headers" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/ArgumentParserKit"
-OTHER_LDFLAGS = $(inherited) -framework "ArgumentParserKit" -framework "Foundation"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_CONFIGURATION_BUILD_DIR}/ArgumentParserKit/ArgumentParserKit.framework/Headers" -isystem "${PODS_CONFIGURATION_BUILD_DIR}/SerialPort/SerialPort.framework/Headers" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/ArgumentParserKit" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/SerialPort"
+OTHER_LDFLAGS = $(inherited) -framework "ArgumentParserKit" -framework "Foundation" -framework "SerialPort"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
