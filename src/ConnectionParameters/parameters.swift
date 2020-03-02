@@ -8,14 +8,25 @@
 
 import Foundation
 
-protocol SimpleSerialParameter : CaseIterable, Hashable {
+public protocol BaseParameter : CaseIterable, Hashable {
+    var name : String { get }
+}
+
+extension BaseParameter {
+    public var name : String { "\(self)" }
+}
+
+public protocol SimpleSerialParameter : BaseParameter {
     
     static var convert : [Self:UInt32] { get }
     static var MASK : UInt32 { get }
     
     var mask : UInt { get }
+    var name : String { get }
+    
     
     func apply(_ : UInt) -> UInt
+ 
 }
 extension Int32 {
     var u : UInt32 { numericCast(self) }
@@ -25,10 +36,12 @@ extension SimpleSerialParameter {
     
     public var mask : UInt { numericCast(Self.convert[self] ?? 0) }
     public func apply(_ word : UInt) -> UInt { (word & ~numericCast(Self.MASK)) | self.mask }
+    
+    
 }
     
 
-protocol SerialParameter : RawRepresentable, SimpleSerialParameter
+public protocol SerialParameter : RawRepresentable, SimpleSerialParameter
     where RawValue == Int {
     
     var value : Int { get }

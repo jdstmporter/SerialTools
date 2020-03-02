@@ -32,14 +32,9 @@ of the Objective-C library at https://github.com/justinmeiners/ios-color-wheel.
   s.platform = :osx, '10.15'
 
   s.source = { :git => 'https://github.com/jdstmporter/SerialTools.git', :tag => "#{s.version}" }
-  s.source_files = 'SerialPort/src/*/*.{swift}'
+  s.source_files = 'src/*/*.{swift}'
   
-  # s.resource_bundles = {
-  #   'ColourWheel' => ['ColourWheel/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  
 
 end
 

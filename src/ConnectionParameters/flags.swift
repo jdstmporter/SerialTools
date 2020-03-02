@@ -65,14 +65,14 @@ public enum InputMode : SimpleSerialParameter {
     case Canonical
     case Raw
     
-    static var MASK: UInt32 = ~(ICANON | ECHO | ECHOE).u
+    public static var MASK: UInt32 = ~(ICANON | ECHO | ECHOE).u
     public static var convert: [InputMode : UInt32] = [
         .Canonical : (ICANON | ECHO | ECHOE).u,
         .Raw : 0
     ]
 }
 
-public enum FlowControl {
+public enum FlowControl : BaseParameter {
 
     case XON
     case RTSCTS
@@ -84,7 +84,7 @@ public enum HardwareFlowControl : SimpleSerialParameter {
     case RTSCTS
     case None
     
-    static var MASK: UInt32 = ~CRTSCTS.u
+    public static var MASK: UInt32 = ~CRTSCTS.u
     public static var convert: [HardwareFlowControl : UInt32] = [
         .RTSCTS : CRTSCTS.u,
         .None : 0
@@ -94,11 +94,11 @@ public enum HardwareFlowControl : SimpleSerialParameter {
 
 
 public struct SerialFlags {
-    public enum Mode {
-        case _8N1
-        case _7E1
-        case _7O1
-        case _7S1
+    public enum Mode : String {
+        case _8N1 = "8N1"
+        case _7E1 = "7E1"
+        case _7O1 = "7O1"
+        case _7S1 = "7S1"
     }
     var rate : Bauds = .b9600
     var flowControl : FlowControl = .None

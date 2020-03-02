@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6D796FC44DBB8581E9DD44E2 /* Pods_serialtool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C07678D6D5C71CF035718F1 /* Pods_serialtool.framework */; };
 		E16F76552409DEEC006C5FC8 /* atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76542409DEEC006C5FC8 /* atomic.swift */; };
+		E16F76B4240C711F006C5FC8 /* parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76B2240C70EC006C5FC8 /* parser.swift */; };
 		E1B6BAEF2400831200E74308 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAEE2400831200E74308 /* main.swift */; };
 		E1B6BAF72400833000E74308 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B6BAF62400833000E74308 /* IOKit.framework */; };
 		E1BFB51824073A5400196A02 /* termios.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB022405FBA200E74308 /* termios.swift */; };
@@ -40,6 +41,7 @@
 		7C07678D6D5C71CF035718F1 /* Pods_serialtool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_serialtool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16F765124087007006C5FC8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E16F76542409DEEC006C5FC8 /* atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atomic.swift; sourceTree = "<group>"; };
+		E16F76B2240C70EC006C5FC8 /* parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parser.swift; sourceTree = "<group>"; };
 		E1B6BAEB2400831200E74308 /* serialtool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = serialtool; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B6BAEE2400831200E74308 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		E1B6BAF62400833000E74308 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -52,7 +54,7 @@
 		E1B6BB042405FBEF00E74308 /* parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parameters.swift; sourceTree = "<group>"; };
 		E1B6BB062405FC4000E74308 /* flags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flags.swift; sourceTree = "<group>"; };
 		E1B6BB0A2406F41B00E74308 /* logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logging.swift; sourceTree = "<group>"; };
-		E1BFB51024073A4500196A02 /* SerialPort.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SerialPort.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1BFB51024073A4500196A02 /* SerialPortFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SerialPortFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BFB51324073A4500196A02 /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
 		E1BFB53624073CFA00196A02 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E1ED200724086AAC0019E8AE /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -90,14 +92,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E16F76B5240C91E2006C5FC8 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				E1B6BAEE2400831200E74308 /* main.swift */,
+				E16F76B2240C70EC006C5FC8 /* parser.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
 		E1B6BAE22400831200E74308 = {
 			isa = PBXGroup;
 			children = (
+				E1BFB51324073A4500196A02 /* Framework-Info.plist */,
+				E1BFB55824074B0F00196A02 /* src */,
+				E16F76B5240C91E2006C5FC8 /* app */,
 				E16F765124087007006C5FC8 /* LICENSE */,
 				E1ED200824086D360019E8AE /* SerialPort.podspec */,
 				E1ED200724086AAC0019E8AE /* Podfile */,
 				E1BFB53624073CFA00196A02 /* README.md */,
-				E1B6BAED2400831200E74308 /* SerialPort */,
 				E1B6BAEC2400831200E74308 /* Products */,
 				E1B6BAF52400833000E74308 /* Frameworks */,
 				07B788BF7C6E7076BF952EFF /* Pods */,
@@ -108,19 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				E1B6BAEB2400831200E74308 /* serialtool */,
-				E1BFB51024073A4500196A02 /* SerialPort.framework */,
+				E1BFB51024073A4500196A02 /* SerialPortFramework.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		E1B6BAED2400831200E74308 /* SerialPort */ = {
-			isa = PBXGroup;
-			children = (
-				E1B6BAEE2400831200E74308 /* main.swift */,
-				E1BFB51324073A4500196A02 /* Framework-Info.plist */,
-				E1BFB55824074B0F00196A02 /* src */,
-			);
-			path = SerialPort;
 			sourceTree = "<group>";
 		};
 		E1B6BAF52400833000E74308 /* Frameworks */ = {
@@ -212,9 +215,9 @@
 			productReference = E1B6BAEB2400831200E74308 /* serialtool */;
 			productType = "com.apple.product-type.tool";
 		};
-		E1BFB50F24073A4400196A02 /* SerialPort */ = {
+		E1BFB50F24073A4400196A02 /* SerialPortFramework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1BFB51524073A4500196A02 /* Build configuration list for PBXNativeTarget "SerialPort" */;
+			buildConfigurationList = E1BFB51524073A4500196A02 /* Build configuration list for PBXNativeTarget "SerialPortFramework" */;
 			buildPhases = (
 				E1BFB50B24073A4400196A02 /* Headers */,
 				E1BFB50C24073A4400196A02 /* Sources */,
@@ -225,9 +228,9 @@
 			);
 			dependencies = (
 			);
-			name = SerialPort;
+			name = SerialPortFramework;
 			productName = SerialFramework;
-			productReference = E1BFB51024073A4500196A02 /* SerialPort.framework */;
+			productReference = E1BFB51024073A4500196A02 /* SerialPortFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -262,7 +265,7 @@
 			projectRoot = "";
 			targets = (
 				E1B6BAEA2400831200E74308 /* serialtool */,
-				E1BFB50F24073A4400196A02 /* SerialPort */,
+				E1BFB50F24073A4400196A02 /* SerialPortFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -307,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16F76B4240C711F006C5FC8 /* parser.swift in Sources */,
 				E1B6BAEF2400831200E74308 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +455,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XLKATCU397;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/SerialPort/Framework-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -463,6 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XLKATCU397;
 				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/SerialPort/Framework-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -481,7 +487,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = c11;
-				INFOPLIST_FILE = "Framework-info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SerialPort/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -511,7 +517,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = c11;
-				INFOPLIST_FILE = "Framework-info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SerialPort/Framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -549,7 +555,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1BFB51524073A4500196A02 /* Build configuration list for PBXNativeTarget "SerialPort" */ = {
+		E1BFB51524073A4500196A02 /* Build configuration list for PBXNativeTarget "SerialPortFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1BFB51624073A4500196A02 /* Debug */,

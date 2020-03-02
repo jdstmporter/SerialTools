@@ -19,6 +19,6 @@
     "git": "https://github.com/jdstmporter/SerialTools.git",
     "tag": "0.1.0"
   },
-  "source_files": "SerialPort/src/*/*.{swift}",
+  "source_files": "src/*/*.{swift}",
   "swift_version": "5"
 }

@@ -1,8 +1,8 @@
-
+platform :macos, '10.15'
+inhibit_all_warnings!
 
 target 'serialtool' do
-    platform :macos, '10.15'
-    inhibit_all_warnings!
+    
     project 'Serial', {
         'Debug' => :debug,
         'Release' => :release
