@@ -76,3 +76,13 @@ class ActionSet {
     }
 }
 
+func run(args : [String]) {
+    do {
+        let actions = ActionSet(commandName: "serialtool", usage: "serial", overview: "Simple serial port utility")
+        actions.register(Scan.self)
+        actions.register(Connect.self)
+        try actions.run(args: args)
+    }
+    catch let e { print(e) }
+}
+

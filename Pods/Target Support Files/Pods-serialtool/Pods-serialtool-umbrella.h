@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_serialtoolVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_serialtoolVersionString[];
+FOUNDATION_EXPORT double Pods_SerialToolVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SerialToolVersionString[];
 

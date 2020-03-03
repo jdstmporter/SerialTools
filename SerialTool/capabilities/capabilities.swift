@@ -9,6 +9,8 @@
 import Foundation
 import SerialPort
 
+enum Errors : Error { case noSuchPort }
+
 class Scan : Action {
     
     override var command : String { "scan" }

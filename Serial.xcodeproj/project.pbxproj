@@ -3,18 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D796FC44DBB8581E9DD44E2 /* Pods_serialtool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C07678D6D5C71CF035718F1 /* Pods_serialtool.framework */; };
 		E16F76552409DEEC006C5FC8 /* atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76542409DEEC006C5FC8 /* atomic.swift */; };
-		E16F76B4240C711F006C5FC8 /* parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76B2240C70EC006C5FC8 /* parser.swift */; };
-		E16F76B7240D8762006C5FC8 /* capabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76B6240D8762006C5FC8 /* capabilities.swift */; };
-		E16F76B9240D8787006C5FC8 /* arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76B8240D8787006C5FC8 /* arguments.swift */; };
-		E16F76BA240DC275006C5FC8 /* serialtool in CopyFiles */ = {isa = PBXBuildFile; fileRef = E1B6BAEB2400831200E74308 /* serialtool */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		E1B6BAEF2400831200E74308 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAEE2400831200E74308 /* main.swift */; };
-		E1B6BAF72400833000E74308 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B6BAF62400833000E74308 /* IOKit.framework */; };
+		E16F76F4240DE2B4006C5FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76F3240DE2B4006C5FC8 /* AppDelegate.swift */; };
+		E16F76F6240DE2B4006C5FC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76F5240DE2B4006C5FC8 /* ViewController.swift */; };
+		E16F76F8240DE2B5006C5FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16F76F7240DE2B5006C5FC8 /* Assets.xcassets */; };
+		E16F76FB240DE2B6006C5FC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16F76F9240DE2B5006C5FC8 /* Main.storyboard */; };
+		E16F7701240DE2E7006C5FC8 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B6BAF62400833000E74308 /* IOKit.framework */; };
+		E16F7704240DE354006C5FC8 /* parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76B2240C70EC006C5FC8 /* parser.swift */; };
+		E16F7705240DE354006C5FC8 /* capabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76B6240D8762006C5FC8 /* capabilities.swift */; };
+		E16F7706240DE354006C5FC8 /* arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76B8240D8787006C5FC8 /* arguments.swift */; };
 		E1BFB51824073A5400196A02 /* termios.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB022405FBA200E74308 /* termios.swift */; };
 		E1BFB51924073A5800196A02 /* parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB042405FBEF00E74308 /* parameters.swift */; };
 		E1BFB51A24073A5C00196A02 /* flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB062405FC4000E74308 /* flags.swift */; };
@@ -25,31 +26,30 @@
 		E1BFB51F24073A7100196A02 /* connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAFE2403035F00E74308 /* connection.swift */; };
 		E1BFB52024073A7500196A02 /* posix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB002405FB0D00E74308 /* posix.swift */; };
 		E1BFB52124073A8A00196A02 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B6BAF62400833000E74308 /* IOKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		EDC1C84880B83251880CE4B6 /* Pods_SerialTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBF6A2648B069475D13F521 /* Pods_SerialTool.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		E1B6BAE92400831200E74308 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = usr/local/bin;
-			dstSubfolderSpec = 6;
-			files = (
-				E16F76BA240DC275006C5FC8 /* serialtool in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		54F63EC4AEDBE9ABA963EF1E /* Pods-serialtool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-serialtool.release.xcconfig"; path = "Target Support Files/Pods-serialtool/Pods-serialtool.release.xcconfig"; sourceTree = "<group>"; };
+		53FFA22FEF37B5D0243FC196 /* Pods-serialtool_.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-serialtool_.release.xcconfig"; path = "Target Support Files/Pods-serialtool_/Pods-serialtool_.release.xcconfig"; sourceTree = "<group>"; };
+		6BE43C31B9AC61147161CBD1 /* Pods-porttool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-porttool.release.xcconfig"; path = "Target Support Files/Pods-porttool/Pods-porttool.release.xcconfig"; sourceTree = "<group>"; };
+		765F5F1C2B29A070D40BB329 /* Pods_porttool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_porttool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76B4C2412DEB7D544741C817 /* Pods-serialtool_.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-serialtool_.debug.xcconfig"; path = "Target Support Files/Pods-serialtool_/Pods-serialtool_.debug.xcconfig"; sourceTree = "<group>"; };
 		7C07678D6D5C71CF035718F1 /* Pods_serialtool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_serialtool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96512E0E88F53E1F0B24D656 /* Pods-SerialTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerialTool.release.xcconfig"; path = "Target Support Files/Pods-SerialTool/Pods-SerialTool.release.xcconfig"; sourceTree = "<group>"; };
+		AC024F1626B4C5730B9620D0 /* Pods-porttool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-porttool.debug.xcconfig"; path = "Target Support Files/Pods-porttool/Pods-porttool.debug.xcconfig"; sourceTree = "<group>"; };
+		ADBF6A2648B069475D13F521 /* Pods_SerialTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerialTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16F765124087007006C5FC8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E16F76542409DEEC006C5FC8 /* atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atomic.swift; sourceTree = "<group>"; };
 		E16F76B2240C70EC006C5FC8 /* parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parser.swift; sourceTree = "<group>"; };
 		E16F76B6240D8762006C5FC8 /* capabilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capabilities.swift; sourceTree = "<group>"; };
 		E16F76B8240D8787006C5FC8 /* arguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arguments.swift; sourceTree = "<group>"; };
-		E1B6BAEB2400831200E74308 /* serialtool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = serialtool; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1B6BAEE2400831200E74308 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E16F76F1240DE2B4006C5FC8 /* SerialTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SerialTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E16F76F3240DE2B4006C5FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E16F76F5240DE2B4006C5FC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E16F76F7240DE2B5006C5FC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E16F76FA240DE2B5006C5FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E16F76FC240DE2B6006C5FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E16F76FD240DE2B6006C5FC8 /* SerialTool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SerialTool.entitlements; sourceTree = "<group>"; };
 		E1B6BAF62400833000E74308 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		E1B6BAF8240084D300E74308 /* ports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ports.swift; sourceTree = "<group>"; };
 		E1B6BAFA2402FC7300E74308 /* errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errors.swift; sourceTree = "<group>"; };
@@ -65,16 +65,17 @@
 		E1BFB53624073CFA00196A02 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E1ED200724086AAC0019E8AE /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E1ED200824086D360019E8AE /* SerialPort.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SerialPort.podspec; sourceTree = "<group>"; };
-		EB20FE403306CD8BB18A6E9E /* Pods-serialtool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-serialtool.debug.xcconfig"; path = "Target Support Files/Pods-serialtool/Pods-serialtool.debug.xcconfig"; sourceTree = "<group>"; };
+		E69A895AAD27B574694F0D67 /* Pods_serialtool_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_serialtool_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1CD4EE0CDBF7C61249AC88B /* Pods-SerialTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerialTool.debug.xcconfig"; path = "Target Support Files/Pods-SerialTool/Pods-SerialTool.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E1B6BAE82400831200E74308 /* Frameworks */ = {
+		E16F76EE240DE2B4006C5FC8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1B6BAF72400833000E74308 /* IOKit.framework in Frameworks */,
-				6D796FC44DBB8581E9DD44E2 /* Pods_serialtool.framework in Frameworks */,
+				EDC1C84880B83251880CE4B6 /* Pods_SerialTool.framework in Frameworks */,
+				E16F7701240DE2E7006C5FC8 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,21 +93,38 @@
 		07B788BF7C6E7076BF952EFF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EB20FE403306CD8BB18A6E9E /* Pods-serialtool.debug.xcconfig */,
-				54F63EC4AEDBE9ABA963EF1E /* Pods-serialtool.release.xcconfig */,
+				AC024F1626B4C5730B9620D0 /* Pods-porttool.debug.xcconfig */,
+				6BE43C31B9AC61147161CBD1 /* Pods-porttool.release.xcconfig */,
+				76B4C2412DEB7D544741C817 /* Pods-serialtool_.debug.xcconfig */,
+				53FFA22FEF37B5D0243FC196 /* Pods-serialtool_.release.xcconfig */,
+				F1CD4EE0CDBF7C61249AC88B /* Pods-SerialTool.debug.xcconfig */,
+				96512E0E88F53E1F0B24D656 /* Pods-SerialTool.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E16F76B5240C91E2006C5FC8 /* app */ = {
+		E16F76F2240DE2B4006C5FC8 /* SerialTool */ = {
 			isa = PBXGroup;
 			children = (
-				E1B6BAEE2400831200E74308 /* main.swift */,
+				E16F7702240DE327006C5FC8 /* capabilities */,
+				E16F76F3240DE2B4006C5FC8 /* AppDelegate.swift */,
+				E16F76F5240DE2B4006C5FC8 /* ViewController.swift */,
+				E16F76F7240DE2B5006C5FC8 /* Assets.xcassets */,
+				E16F76F9240DE2B5006C5FC8 /* Main.storyboard */,
+				E16F76FC240DE2B6006C5FC8 /* Info.plist */,
+				E16F76FD240DE2B6006C5FC8 /* SerialTool.entitlements */,
+			);
+			path = SerialTool;
+			sourceTree = "<group>";
+		};
+		E16F7702240DE327006C5FC8 /* capabilities */ = {
+			isa = PBXGroup;
+			children = (
 				E16F76B2240C70EC006C5FC8 /* parser.swift */,
 				E16F76B6240D8762006C5FC8 /* capabilities.swift */,
 				E16F76B8240D8787006C5FC8 /* arguments.swift */,
 			);
-			path = app;
+			path = capabilities;
 			sourceTree = "<group>";
 		};
 		E1B6BAE22400831200E74308 = {
@@ -114,11 +132,11 @@
 			children = (
 				E1BFB51324073A4500196A02 /* Framework-Info.plist */,
 				E1BFB55824074B0F00196A02 /* src */,
-				E16F76B5240C91E2006C5FC8 /* app */,
 				E16F765124087007006C5FC8 /* LICENSE */,
 				E1ED200824086D360019E8AE /* SerialPort.podspec */,
 				E1ED200724086AAC0019E8AE /* Podfile */,
 				E1BFB53624073CFA00196A02 /* README.md */,
+				E16F76F2240DE2B4006C5FC8 /* SerialTool */,
 				E1B6BAEC2400831200E74308 /* Products */,
 				E1B6BAF52400833000E74308 /* Frameworks */,
 				07B788BF7C6E7076BF952EFF /* Pods */,
@@ -128,8 +146,8 @@
 		E1B6BAEC2400831200E74308 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E1B6BAEB2400831200E74308 /* serialtool */,
 				E1BFB51024073A4500196A02 /* SerialPortFramework.framework */,
+				E16F76F1240DE2B4006C5FC8 /* SerialTool.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +157,9 @@
 			children = (
 				E1B6BAF62400833000E74308 /* IOKit.framework */,
 				7C07678D6D5C71CF035718F1 /* Pods_serialtool.framework */,
+				765F5F1C2B29A070D40BB329 /* Pods_porttool.framework */,
+				E69A895AAD27B574694F0D67 /* Pods_serialtool_.framework */,
+				ADBF6A2648B069475D13F521 /* Pods_SerialTool.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -205,23 +226,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E1B6BAEA2400831200E74308 /* serialtool */ = {
+		E16F76F0240DE2B4006C5FC8 /* SerialTool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1B6BAF22400831200E74308 /* Build configuration list for PBXNativeTarget "serialtool" */;
+			buildConfigurationList = E16F76FE240DE2B6006C5FC8 /* Build configuration list for PBXNativeTarget "SerialTool" */;
 			buildPhases = (
-				50E8DA23FE650192E28FF1B4 /* [CP] Check Pods Manifest.lock */,
-				E1B6BAE72400831200E74308 /* Sources */,
-				E1B6BAE82400831200E74308 /* Frameworks */,
-				E1B6BAE92400831200E74308 /* CopyFiles */,
+				2881C364157068F21FD714E6 /* [CP] Check Pods Manifest.lock */,
+				E16F76ED240DE2B4006C5FC8 /* Sources */,
+				E16F76EE240DE2B4006C5FC8 /* Frameworks */,
+				E16F76EF240DE2B4006C5FC8 /* Resources */,
+				9245AF9AE7DD7BA9053EDA5B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = serialtool;
-			productName = Serial;
-			productReference = E1B6BAEB2400831200E74308 /* serialtool */;
-			productType = "com.apple.product-type.tool";
+			name = SerialTool;
+			productName = SerialTool;
+			productReference = E16F76F1240DE2B4006C5FC8 /* SerialTool.app */;
+			productType = "com.apple.product-type.application";
 		};
 		E1BFB50F24073A4400196A02 /* SerialPortFramework */ = {
 			isa = PBXNativeTarget;
@@ -251,7 +273,7 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "JP Embedded Solutions";
 				TargetAttributes = {
-					E1B6BAEA2400831200E74308 = {
+					E16F76F0240DE2B4006C5FC8 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					E1BFB50F24073A4400196A02 = {
@@ -272,13 +294,22 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E1B6BAEA2400831200E74308 /* serialtool */,
 				E1BFB50F24073A4400196A02 /* SerialPortFramework */,
+				E16F76F0240DE2B4006C5FC8 /* SerialTool */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E16F76EF240DE2B4006C5FC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E16F76F8240DE2B5006C5FC8 /* Assets.xcassets in Resources */,
+				E16F76FB240DE2B6006C5FC8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1BFB50E24073A4400196A02 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,7 +320,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		50E8DA23FE650192E28FF1B4 /* [CP] Check Pods Manifest.lock */ = {
+		2881C364157068F21FD714E6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -304,24 +335,42 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-serialtool-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SerialTool-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9245AF9AE7DD7BA9053EDA5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SerialTool/Pods-SerialTool-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SerialTool/Pods-SerialTool-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SerialTool/Pods-SerialTool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E1B6BAE72400831200E74308 /* Sources */ = {
+		E16F76ED240DE2B4006C5FC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E16F76B9240D8787006C5FC8 /* arguments.swift in Sources */,
-				E16F76B7240D8762006C5FC8 /* capabilities.swift in Sources */,
-				E16F76B4240C711F006C5FC8 /* parser.swift in Sources */,
-				E1B6BAEF2400831200E74308 /* main.swift in Sources */,
+				E16F76F6240DE2B4006C5FC8 /* ViewController.swift in Sources */,
+				E16F76F4240DE2B4006C5FC8 /* AppDelegate.swift in Sources */,
+				E16F7704240DE354006C5FC8 /* parser.swift in Sources */,
+				E16F7705240DE354006C5FC8 /* capabilities.swift in Sources */,
+				E16F7706240DE354006C5FC8 /* arguments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +393,60 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		E16F76F9240DE2B5006C5FC8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E16F76FA240DE2B5006C5FC8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		E16F76FF240DE2B6006C5FC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1CD4EE0CDBF7C61249AC88B /* Pods-SerialTool.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SerialTool/SerialTool.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XLKATCU397;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = SerialTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.porternet.SerialTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E16F7700240DE2B6006C5FC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96512E0E88F53E1F0B24D656 /* Pods-SerialTool.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SerialTool/SerialTool.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XLKATCU397;
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = SerialTool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.porternet.SerialTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		E1B6BAF02400831200E74308 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -460,32 +562,6 @@
 			};
 			name = Release;
 		};
-		E1B6BAF32400831200E74308 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB20FE403306CD8BB18A6E9E /* Pods-serialtool.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XLKATCU397;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/SerialPort/Framework-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		E1B6BAF42400831200E74308 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54F63EC4AEDBE9ABA963EF1E /* Pods-serialtool.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XLKATCU397;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/SerialPort/Framework-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		E1BFB51624073A4500196A02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -549,20 +625,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E16F76FE240DE2B6006C5FC8 /* Build configuration list for PBXNativeTarget "SerialTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E16F76FF240DE2B6006C5FC8 /* Debug */,
+				E16F7700240DE2B6006C5FC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E1B6BAE62400831200E74308 /* Build configuration list for PBXProject "Serial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E1B6BAF02400831200E74308 /* Debug */,
 				E1B6BAF12400831200E74308 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E1B6BAF22400831200E74308 /* Build configuration list for PBXNativeTarget "serialtool" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E1B6BAF32400831200E74308 /* Debug */,
-				E1B6BAF42400831200E74308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
