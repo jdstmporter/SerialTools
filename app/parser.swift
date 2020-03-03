@@ -10,37 +10,7 @@ import Foundation
 import SerialPort
 import ArgumentParserKit
 
-class Wrapper<W> : ArgumentKind where W : BaseParameter {
-    
-    public private(set) var value : W
-    required init(argument: String) throws {
-        guard let v = (W.allCases.first { $0.name == argument }) else { throw ArgumentConversionError.unknown(value: argument) }
-        value = v
-    }
-    
-    
-    static var completion: ShellCompletion { return .none }
-    
-    
-}
 
-extension SerialFlags.Mode : ArgumentKind {
-    public static var completion: ShellCompletion { return .none }
-    
-    public init(argument: String) throws {
-        guard let v = SerialFlags.Mode(rawValue : argument) else { throw ArgumentConversionError.unknown(value: argument) }
-        self = v
-    }
-}
-
-extension Double : ArgumentKind {
-    
-    public init(argument: String) throws {
-        guard let d = Double(argument) else { throw ArgumentConversionError.typeMismatch(value: argument, expectedType: Double.self)}
-        self=d
-    }
-    public static var completion: ShellCompletion = .none
-}
 
 class Action {
     public typealias Parser = ArgumentParser

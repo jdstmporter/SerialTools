@@ -66,7 +66,7 @@
 		1800F312F0EFDF69460D858AD72597A9 /* termios.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = termios.swift; sourceTree = "<group>"; };
 		1D2A4FD97601603C39EA153D99A4392F /* ArgumentParserKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ArgumentParserKit.xcconfig; sourceTree = "<group>"; };
 		2EB58627C911C88590C5C03198DC1B8F /* Thread.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Thread.swift; path = ArgumentParserKit/Classes/internal/Basic/Thread.swift; sourceTree = "<group>"; };
-		31F661B27BA2CA3D2D9B88B526E31869 /* ArgumentParserKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ArgumentParserKit.framework; path = ArgumentParserKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31F661B27BA2CA3D2D9B88B526E31869 /* ArgumentParserKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArgumentParserKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39383EBA52E73EE2402606214D13B522 /* parameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = parameters.swift; sourceTree = "<group>"; };
 		3B4B577EDF1F45180B23B4C188932AB3 /* Pods-serialtool-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-serialtool-frameworks.sh"; sourceTree = "<group>"; };
 		3BBBA59789595C17B3E61AA4AEF7E87B /* Pods-serialtool-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-serialtool-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -81,22 +81,22 @@
 		5DF9DCB5082D34C3CB9B7E207806075C /* ArgumentParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArgumentParser.swift; path = ArgumentParserKit/Classes/ArgumentParser.swift; sourceTree = "<group>"; };
 		6472FB4251269FE5056926E2D7BD05DB /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = ArgumentParserKit/Classes/internal/Utility/StringExtensions.swift; sourceTree = "<group>"; };
 		64735A976593F155F9461C58AD6FDEE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		68C2898C717185E8C6A6E1E73626C3A7 /* Pods_serialtool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_serialtool.framework; path = "Pods-serialtool.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68C2898C717185E8C6A6E1E73626C3A7 /* Pods_serialtool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_serialtool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EF0659F385FA564A0DC1BA1FD067043 /* connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = connection.swift; sourceTree = "<group>"; };
-		6F1C72B3B26DFEEDE467B3E15729C133 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6F1C72B3B26DFEEDE467B3E15729C133 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7050929EC163D987403FDDF469A5E956 /* errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = errors.swift; sourceTree = "<group>"; };
 		7203ED5B0ECB5D9727DDD973F2E6144A /* Pods-serialtool.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-serialtool.modulemap"; sourceTree = "<group>"; };
 		76FA920745BCDFC91978E36613F15D36 /* SerialPort-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SerialPort-dummy.m"; sourceTree = "<group>"; };
-		7F3CA34AD0BAD0126BAD92709E1F6ECA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7F3CA34AD0BAD0126BAD92709E1F6ECA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		85FDF7D26245C789CE0E3496A70DB250 /* ports.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ports.swift; sourceTree = "<group>"; };
 		8810F72217F3EC1B85E56CF3ACF29F4D /* SerialPort.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SerialPort.modulemap; sourceTree = "<group>"; };
-		8A2CFB2597CAFBB75667DEB023E3DB24 /* SerialPort.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SerialPort.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8A2CFB2597CAFBB75667DEB023E3DB24 /* SerialPort.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SerialPort.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98EF0FEB911F4779C3B15FC1FC2ED571 /* SerialPort-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SerialPort-umbrella.h"; sourceTree = "<group>"; };
 		9A94BF34C754EE0A6382EBDC30C95183 /* CollectionExtensions+only.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CollectionExtensions+only.swift"; path = "ArgumentParserKit/Classes/internal/Basic/CollectionExtensions+only.swift"; sourceTree = "<group>"; };
 		9C698A497F35C50DF48B81F9D01B1748 /* Pods-serialtool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-serialtool-Info.plist"; sourceTree = "<group>"; };
 		9CCED9711D34615B431EFE69CDC331D9 /* Pods-serialtool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-serialtool-dummy.m"; sourceTree = "<group>"; };
-		9D1A0A1F386F312FE260AF7CDC55BC44 /* SerialPort.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SerialPort.framework; path = SerialPort.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D1A0A1F386F312FE260AF7CDC55BC44 /* SerialPort.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SerialPort.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F7B9C72BAA9B731CF825C588D207413 /* FileSystem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileSystem.swift; path = ArgumentParserKit/Classes/internal/Basic/FileSystem.swift; sourceTree = "<group>"; };
 		A82B643D1C23B7E2CE7DD55154DB5A48 /* Pods-serialtool-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-serialtool-umbrella.h"; sourceTree = "<group>"; };
 		B2E91EEB266713C5A0F64FD842B73733 /* CollectionAlgorithms.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionAlgorithms.swift; path = ArgumentParserKit/Classes/internal/Basic/CollectionAlgorithms.swift; sourceTree = "<group>"; };
@@ -183,7 +183,6 @@
 				47DDEA16041CAEA8F60A433316811763 /* URL.swift */,
 				4C8CAFC4FB42C33817F5ACEA1C5D675D /* Support Files */,
 			);
-			name = ArgumentParserKit;
 			path = ArgumentParserKit;
 			sourceTree = "<group>";
 		};
@@ -434,6 +433,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					B63242228573749896CE98806EFCD3D1 = {
+						LastSwiftMigration = 1130;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -577,7 +581,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -855,7 +859,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
