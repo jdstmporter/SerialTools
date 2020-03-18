@@ -1,6 +1,0 @@
-framework module ArgumentParserKit {
-  umbrella header "ArgumentParserKit-umbrella.h"
-
-  export *
-  module * { export * }
-}

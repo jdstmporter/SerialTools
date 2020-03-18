@@ -10,7 +10,33 @@ import Foundation
 import IOKit
 import IOKit.serial
 
+public protocol Nameable {
+    var name : String { get }
+}
+extension Nameable {
+    public var name : String { "\(self)" }
+    
+    
+}
+
 public class SerialPort : CustomStringConvertible, CustomDebugStringConvertible, Sequence {
+    
+    public enum BSDType : Nameable {
+        case RS232
+        case Serial
+        case Modem
+        
+        private static let map : [String:BSDType] = [
+            kIOSerialBSDAllTypes : .Serial,
+            kIOSerialBSDModemType : .Modem,
+            kIOSerialBSDRS232Type : .RS232
+        ]
+        public init?(_ s : String?) {
+            guard let s = s, let v = Self.map[s] else { return nil }
+            self = v
+        }
+    }
+    
     public typealias Iterator = Dictionary<String,Any>.Iterator
     private let object : IOObject
     public private(set) var id : UInt64
@@ -38,6 +64,7 @@ public class SerialPort : CustomStringConvertible, CustomDebugStringConvertible,
     public var name : String? { self[kIOTTYDeviceKey] }
     public var inbound : String? { self[kIODialinDeviceKey] }
     public var outbound : String? { self[kIOCalloutDeviceKey] }
+    public var clientType : BSDType? { BSDType(self[kIOSerialBSDTypeKey]) }
     
     public func isBusy() throws -> Bool {
         var state : UInt32 = 0

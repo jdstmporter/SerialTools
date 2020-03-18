@@ -8,7 +8,7 @@ target 'SerialTool' do
         'Release' => :release
     }
     use_frameworks!
-    pod 'ArgumentParserKit', '~> 1.0.0'
+    #pod 'ArgumentParserKit', '~> 1.0.0'
     pod 'SerialPort', :path => '.'
 end
 

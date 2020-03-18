@@ -3,86 +3,50 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		070AFCA5C5E03987705B479216C7EDAE /* ArgumentParserKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DFB8C13521870CA4F1730E4B34BD30 /* ArgumentParserKit-dummy.m */; };
-		162347C2DF52ED63631D548017588A4A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A88BC9A09E22966FC557877A938E37 /* Cocoa.framework */; };
-		1B03970C34BE2A4D2810DC708C5FB993 /* Pods-SerialTool-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6CE11BBCA2558B53A66DD0542BAE1B /* Pods-SerialTool-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1BD9CB24021C0E23FE8A5AD44844E63A /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37B0333B4B600065684F10D6D97EFB8 /* DictionaryExtensions.swift */; };
 		212DCC505B4ED76BF7BE1738D2875172 /* posix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5515230D4526D00B266CA229E75AFEB0 /* posix.swift */; };
-		2A58FF40160F1D6A948451723CCB0DBB /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112914D57F050E89206B0F0F5E5C2513 /* Condition.swift */; };
-		2ADADCD5476C4A3426A678B5E7B9C020 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9872B2D9C594A58068AA7EB355FA27 /* Path.swift */; };
 		311A6C4ECB21DBFB463872B09673AED4 /* ports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FDF7D26245C789CE0E3496A70DB250 /* ports.swift */; };
 		3E54CF68918D4BBFEE57D4B675756B1F /* SerialPort-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98EF0FEB911F4779C3B15FC1FC2ED571 /* SerialPort-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A0AC066A9D1E3E8AB470894809C6416 /* Pods-SerialTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5907F37854D7B088C6F07CE5EE371 /* Pods-SerialTool-dummy.m */; };
-		67AD26E76A6A391465058A9A7BB8EFF2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A88BC9A09E22966FC557877A938E37 /* Cocoa.framework */; };
-		6C94FAFE918E46FEFE1348C0578B6057 /* CollectionExtensions+split.swift in Sources */ = {isa = PBXBuildFile; fileRef = E746B87D09E657A4C3EAD44A8520B595 /* CollectionExtensions+split.swift */; };
-		728F418BCC50328472F7A6517D82E2EB /* ArgumentParserKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB7DBE9CD1512676D6026E136CCD802 /* ArgumentParserKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74989535B7DCDDEFF8293B2DE95FA774 /* port.swift in Sources */ = {isa = PBXBuildFile; fileRef = E292D6EF7CD81C6BFCEEA8F0F7F67DE6 /* port.swift */; };
 		759E51D121504B516EC0A9F1028A0246 /* termios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800F312F0EFDF69460D858AD72597A9 /* termios.swift */; };
-		7D9D8822EC534BE5C95A7A3200514A16 /* FileSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B9C72BAA9B731CF825C588D207413 /* FileSystem.swift */; };
-		851ED3222BE0D7D7C3A331AFFDBA9F16 /* ByteString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B0BC832F738EC5DD2682C9EF47F82 /* ByteString.swift */; };
 		926BBEA3F3AFE8E7360DCE0094B94D4B /* parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39383EBA52E73EE2402606214D13B522 /* parameters.swift */; };
-		97C050F32C470EDB8BE5C79B7D1AA7EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64735A976593F155F9461C58AD6FDEE2 /* Foundation.framework */; };
-		99B74DCA6AFD0BE50419F93E964F071A /* OutputByteStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3C9999CBCE31D8A4C8426E94C263FF /* OutputByteStream.swift */; };
 		A0818A0813943C9C4ADA4E5F54606638 /* SerialPort-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FA920745BCDFC91978E36613F15D36 /* SerialPort-dummy.m */; };
 		A1E0CF25AC2473644DF22524E2AC1495 /* errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7050929EC163D987403FDDF469A5E956 /* errors.swift */; };
-		AAB29DD24A1B7D46622CF472157806FD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A88BC9A09E22966FC557877A938E37 /* Cocoa.framework */; };
+		A55D444251960DEDF39793364E64E379 /* Pods-SerialTool-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6CE11BBCA2558B53A66DD0542BAE1B /* Pods-SerialTool-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB29DD24A1B7D46622CF472157806FD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
 		B180513B906A47A3A943001C51E2D586 /* logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE532B14F4896DAFDBAAA184565C570F /* logging.swift */; };
-		B21952FCA372D3F38B368E9861EDC6E8 /* CollectionAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E91EEB266713C5A0F64FD842B73733 /* CollectionAlgorithms.swift */; };
-		B3529C4E1E12CE8E217FCE246F4C4FB7 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6472FB4251269FE5056926E2D7BD05DB /* StringExtensions.swift */; };
-		B36D90C3BE397A9E53780BAF6CDD448B /* CollectionExtensions+only.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A94BF34C754EE0A6382EBDC30C95183 /* CollectionExtensions+only.swift */; };
 		B5722FC8E4563B870B4C11F30B6A6977 /* flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693D621CBC58C44FB923443B0E357C5 /* flags.swift */; };
 		B5EB7204C45159BEECC57B3753316A52 /* atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AC6EA63F5FDF0830BBE876D813A3DE /* atomic.swift */; };
-		C751B47D0EDA8D1F7B69EA45BE00E886 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DDEA16041CAEA8F60A433316811763 /* URL.swift */; };
 		CA49D6C445E91BE40F12E7A94C1825B5 /* connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF0659F385FA564A0DC1BA1FD067043 /* connection.swift */; };
-		DB5968A0671518DC13188D6350DE395C /* ArgumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9DCB5082D34C3CB9B7E207806075C /* ArgumentParser.swift */; };
-		E1C48F1695BF00386D0C73EE8D717570 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB58627C911C88590C5C03198DC1B8F /* Thread.swift */; };
+		D312E5F578EC49BAB472CDB901AFA460 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
+		F8E8F6518D856E81A43B927F6BBE65B9 /* Pods-SerialTool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A5907F37854D7B088C6F07CE5EE371 /* Pods-SerialTool-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		281B04FB86715D8B4C976ECE64BC0107 /* PBXContainerItemProxy */ = {
+		4DDEA4FD30C2B13DDB4CBB761800DB2F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B63242228573749896CE98806EFCD3D1;
 			remoteInfo = SerialPort;
 		};
-		A2C56792AD9E32FBAA5658F398E6553E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ACC90F9D64F5B2E66D26F066189E7EF2;
-			remoteInfo = ArgumentParserKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		07A5907F37854D7B088C6F07CE5EE371 /* Pods-SerialTool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SerialTool-dummy.m"; sourceTree = "<group>"; };
 		07AC6EA63F5FDF0830BBE876D813A3DE /* atomic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = atomic.swift; sourceTree = "<group>"; };
-		112914D57F050E89206B0F0F5E5C2513 /* Condition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Condition.swift; path = ArgumentParserKit/Classes/internal/Basic/Condition.swift; sourceTree = "<group>"; };
 		1534346DC80D6FB5EABA528FCFBC6B75 /* SerialPort-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SerialPort-Info.plist"; sourceTree = "<group>"; };
 		1800F312F0EFDF69460D858AD72597A9 /* termios.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = termios.swift; sourceTree = "<group>"; };
-		1D2A4FD97601603C39EA153D99A4392F /* ArgumentParserKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ArgumentParserKit.xcconfig; sourceTree = "<group>"; };
 		1E6CE11BBCA2558B53A66DD0542BAE1B /* Pods-SerialTool-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SerialTool-umbrella.h"; sourceTree = "<group>"; };
 		21104638016FEC34760CA6F14261C81F /* Pods_SerialTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SerialTool.framework; path = "Pods-SerialTool.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EB58627C911C88590C5C03198DC1B8F /* Thread.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Thread.swift; path = ArgumentParserKit/Classes/internal/Basic/Thread.swift; sourceTree = "<group>"; };
-		31F661B27BA2CA3D2D9B88B526E31869 /* ArgumentParserKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ArgumentParserKit.framework; path = ArgumentParserKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3917ACAF6153A3C2E1D46FBC49E7609F /* Pods-SerialTool-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SerialTool-acknowledgements.markdown"; sourceTree = "<group>"; };
 		39383EBA52E73EE2402606214D13B522 /* parameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = parameters.swift; sourceTree = "<group>"; };
-		3CB7DBE9CD1512676D6026E136CCD802 /* ArgumentParserKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ArgumentParserKit-umbrella.h"; sourceTree = "<group>"; };
-		3F9872B2D9C594A58068AA7EB355FA27 /* Path.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Path.swift; path = ArgumentParserKit/Classes/internal/Basic/Path.swift; sourceTree = "<group>"; };
-		45DFB8C13521870CA4F1730E4B34BD30 /* ArgumentParserKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ArgumentParserKit-dummy.m"; sourceTree = "<group>"; };
 		4693D621CBC58C44FB923443B0E357C5 /* flags.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = flags.swift; sourceTree = "<group>"; };
-		47DDEA16041CAEA8F60A433316811763 /* URL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URL.swift; path = ArgumentParserKit/Classes/internal/Utility/URL.swift; sourceTree = "<group>"; };
 		5515230D4526D00B266CA229E75AFEB0 /* posix.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = posix.swift; sourceTree = "<group>"; };
-		591B0BC832F738EC5DD2682C9EF47F82 /* ByteString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ByteString.swift; path = ArgumentParserKit/Classes/internal/Basic/ByteString.swift; sourceTree = "<group>"; };
 		5C9BB19B01A38A6EA8D8FDB6BADA4E37 /* Pods-SerialTool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SerialTool-Info.plist"; sourceTree = "<group>"; };
-		5DF9DCB5082D34C3CB9B7E207806075C /* ArgumentParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArgumentParser.swift; path = ArgumentParserKit/Classes/ArgumentParser.swift; sourceTree = "<group>"; };
-		6472FB4251269FE5056926E2D7BD05DB /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = ArgumentParserKit/Classes/internal/Utility/StringExtensions.swift; sourceTree = "<group>"; };
-		64735A976593F155F9461C58AD6FDEE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6EF0659F385FA564A0DC1BA1FD067043 /* connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = connection.swift; sourceTree = "<group>"; };
 		6F1C72B3B26DFEEDE467B3E15729C133 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		7050929EC163D987403FDDF469A5E956 /* errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = errors.swift; sourceTree = "<group>"; };
@@ -93,51 +57,33 @@
 		8810F72217F3EC1B85E56CF3ACF29F4D /* SerialPort.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SerialPort.modulemap; sourceTree = "<group>"; };
 		8A2CFB2597CAFBB75667DEB023E3DB24 /* SerialPort.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SerialPort.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98EF0FEB911F4779C3B15FC1FC2ED571 /* SerialPort-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SerialPort-umbrella.h"; sourceTree = "<group>"; };
-		9A94BF34C754EE0A6382EBDC30C95183 /* CollectionExtensions+only.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CollectionExtensions+only.swift"; path = "ArgumentParserKit/Classes/internal/Basic/CollectionExtensions+only.swift"; sourceTree = "<group>"; };
 		9D1A0A1F386F312FE260AF7CDC55BC44 /* SerialPort.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SerialPort.framework; path = SerialPort.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F7B9C72BAA9B731CF825C588D207413 /* FileSystem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileSystem.swift; path = ArgumentParserKit/Classes/internal/Basic/FileSystem.swift; sourceTree = "<group>"; };
-		B2E91EEB266713C5A0F64FD842B73733 /* CollectionAlgorithms.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionAlgorithms.swift; path = ArgumentParserKit/Classes/internal/Basic/CollectionAlgorithms.swift; sourceTree = "<group>"; };
-		B37B0333B4B600065684F10D6D97EFB8 /* DictionaryExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryExtensions.swift; path = ArgumentParserKit/Classes/internal/Basic/DictionaryExtensions.swift; sourceTree = "<group>"; };
-		C154A2EA6EC0E10023A5DAF1752E2E5F /* ArgumentParserKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ArgumentParserKit-Info.plist"; sourceTree = "<group>"; };
 		CE532B14F4896DAFDBAAA184565C570F /* logging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = logging.swift; sourceTree = "<group>"; };
 		CFB5653538B2A3865172FD382765474B /* SerialPort.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SerialPort.xcconfig; sourceTree = "<group>"; };
 		D17B5097B0DF152C4CC40514B16487DD /* Pods-SerialTool.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SerialTool.modulemap"; sourceTree = "<group>"; };
 		D3E386C30ECC41B3FDBF2E37E067F54D /* Pods-SerialTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SerialTool.debug.xcconfig"; sourceTree = "<group>"; };
 		D46BA4AC93D3FC5E9325159D08608286 /* SerialPort-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SerialPort-prefix.pch"; sourceTree = "<group>"; };
 		D831DB36544998690414C3DF9C261FB9 /* Pods-SerialTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SerialTool.release.xcconfig"; sourceTree = "<group>"; };
-		D88F7A7FF65112471EB90E37EA122826 /* ArgumentParserKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ArgumentParserKit-prefix.pch"; sourceTree = "<group>"; };
-		DC3C9999CBCE31D8A4C8426E94C263FF /* OutputByteStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OutputByteStream.swift; path = ArgumentParserKit/Classes/OutputByteStream.swift; sourceTree = "<group>"; };
 		E292D6EF7CD81C6BFCEEA8F0F7F67DE6 /* port.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = port.swift; sourceTree = "<group>"; };
-		E2A88BC9A09E22966FC557877A938E37 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		E746B87D09E657A4C3EAD44A8520B595 /* CollectionExtensions+split.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CollectionExtensions+split.swift"; path = "ArgumentParserKit/Classes/internal/Utility/CollectionExtensions+split.swift"; sourceTree = "<group>"; };
 		F65BD2EE0453E48B8694239CCE804959 /* Pods-SerialTool-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SerialTool-frameworks.sh"; sourceTree = "<group>"; };
-		FFBAF942923F597C47BECD1433935DEA /* ArgumentParserKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ArgumentParserKit.modulemap; sourceTree = "<group>"; };
+		F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4927C92A167F3673CF70DF6594ADC50A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D312E5F578EC49BAB472CDB901AFA460 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		94ACB9C1D2AB80ECC1DD9592B3698F1C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AAB29DD24A1B7D46622CF472157806FD /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A161C0AF7A5CD0A7D4C4A42E427099DE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				162347C2DF52ED63631D548017588A4A /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B73444139DB24BE50A47A20F29C0E07D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				67AD26E76A6A391465058A9A7BB8EFF2 /* Cocoa.framework in Frameworks */,
-				97C050F32C470EDB8BE5C79B7D1AA7EC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,16 +101,6 @@
 			path = src/util;
 			sourceTree = "<group>";
 		};
-		1D6BD8CF158D45E7C3081359ECB90F69 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				31F661B27BA2CA3D2D9B88B526E31869 /* ArgumentParserKit.framework */,
-				21104638016FEC34760CA6F14261C81F /* Pods_SerialTool.framework */,
-				9D1A0A1F386F312FE260AF7CDC55BC44 /* SerialPort.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		1F414F8923182BC59A4C97854D8D96F0 /* Connections */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,26 +111,13 @@
 			path = src/Connections;
 			sourceTree = "<group>";
 		};
-		2C3329310DFF5A0BB142FFE642B604E2 /* ArgumentParserKit */ = {
+		220C4009032601629143136DE33CAF6F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5DF9DCB5082D34C3CB9B7E207806075C /* ArgumentParser.swift */,
-				591B0BC832F738EC5DD2682C9EF47F82 /* ByteString.swift */,
-				B2E91EEB266713C5A0F64FD842B73733 /* CollectionAlgorithms.swift */,
-				9A94BF34C754EE0A6382EBDC30C95183 /* CollectionExtensions+only.swift */,
-				E746B87D09E657A4C3EAD44A8520B595 /* CollectionExtensions+split.swift */,
-				112914D57F050E89206B0F0F5E5C2513 /* Condition.swift */,
-				B37B0333B4B600065684F10D6D97EFB8 /* DictionaryExtensions.swift */,
-				9F7B9C72BAA9B731CF825C588D207413 /* FileSystem.swift */,
-				DC3C9999CBCE31D8A4C8426E94C263FF /* OutputByteStream.swift */,
-				3F9872B2D9C594A58068AA7EB355FA27 /* Path.swift */,
-				6472FB4251269FE5056926E2D7BD05DB /* StringExtensions.swift */,
-				2EB58627C911C88590C5C03198DC1B8F /* Thread.swift */,
-				47DDEA16041CAEA8F60A433316811763 /* URL.swift */,
-				4C8CAFC4FB42C33817F5ACEA1C5D675D /* Support Files */,
+				21104638016FEC34760CA6F14261C81F /* Pods_SerialTool.framework */,
+				9D1A0A1F386F312FE260AF7CDC55BC44 /* SerialPort.framework */,
 			);
-			name = ArgumentParserKit;
-			path = ArgumentParserKit;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		2F6718BD6779C129A35B8FBF0608216E /* Pods-SerialTool */ = {
@@ -212,28 +135,6 @@
 			);
 			name = "Pods-SerialTool";
 			path = "Target Support Files/Pods-SerialTool";
-			sourceTree = "<group>";
-		};
-		4C8CAFC4FB42C33817F5ACEA1C5D675D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FFBAF942923F597C47BECD1433935DEA /* ArgumentParserKit.modulemap */,
-				1D2A4FD97601603C39EA153D99A4392F /* ArgumentParserKit.xcconfig */,
-				45DFB8C13521870CA4F1730E4B34BD30 /* ArgumentParserKit-dummy.m */,
-				C154A2EA6EC0E10023A5DAF1752E2E5F /* ArgumentParserKit-Info.plist */,
-				D88F7A7FF65112471EB90E37EA122826 /* ArgumentParserKit-prefix.pch */,
-				3CB7DBE9CD1512676D6026E136CCD802 /* ArgumentParserKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ArgumentParserKit";
-			sourceTree = "<group>";
-		};
-		5431437FFD4129D29732D023FB89EBB0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2C3329310DFF5A0BB142FFE642B604E2 /* ArgumentParserKit */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		5682E62DC8FD1C0B3168C2C39B5F97B4 /* Targets Support Files */ = {
@@ -269,21 +170,12 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		BE7E6DB4EC06C9746B1E83B7AE7EA44D /* OS X */ = {
+		CBD43E0947D94E318A0ED1350CFF29ED /* OS X */ = {
 			isa = PBXGroup;
 			children = (
-				E2A88BC9A09E22966FC557877A938E37 /* Cocoa.framework */,
-				64735A976593F155F9461C58AD6FDEE2 /* Foundation.framework */,
+				F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */,
 			);
 			name = "OS X";
-			sourceTree = "<group>";
-		};
-		C080C886C9E2F80D52E3E86A62E5B711 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BE7E6DB4EC06C9746B1E83B7AE7EA44D /* OS X */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -291,9 +183,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D76CBB4227CE3683D8945EBCED77B6F5 /* Development Pods */,
-				C080C886C9E2F80D52E3E86A62E5B711 /* Frameworks */,
-				5431437FFD4129D29732D023FB89EBB0 /* Pods */,
-				1D6BD8CF158D45E7C3081359ECB90F69 /* Products */,
+				E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */,
+				220C4009032601629143136DE33CAF6F /* Products */,
 				5682E62DC8FD1C0B3168C2C39B5F97B4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -320,6 +211,14 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBD43E0947D94E318A0ED1350CFF29ED /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EAFDF464E28B8F37FBA9E6122B1B437B /* Pod */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +242,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		41B4904A4AB877ED9C11CB0846422C9F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A55D444251960DEDF39793364E64E379 /* Pods-SerialTool-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DBAADE151DED075D6BF6716477BD1C6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,61 +258,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		909D0ADBBE156173DA63C7B389FBC963 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				728F418BCC50328472F7A6517D82E2EB /* ArgumentParserKit-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1BDEC764AB9B268CDB4E24571278D48 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1B03970C34BE2A4D2810DC708C5FB993 /* Pods-SerialTool-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		01551D219920BF11CDAEAE24F198EB90 /* Pods-SerialTool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 221A830D9FF6B2CC95195AB08ED187E5 /* Build configuration list for PBXNativeTarget "Pods-SerialTool" */;
+			buildConfigurationList = 141142CA67120C6854EE9D43A33EC00D /* Build configuration list for PBXNativeTarget "Pods-SerialTool" */;
 			buildPhases = (
-				C1BDEC764AB9B268CDB4E24571278D48 /* Headers */,
-				5F01CAB565C7655EFD4D50E38E8566DC /* Sources */,
-				A161C0AF7A5CD0A7D4C4A42E427099DE /* Frameworks */,
-				91776D561658C37070B1D3AD5B81D0F8 /* Resources */,
+				41B4904A4AB877ED9C11CB0846422C9F /* Headers */,
+				73CECE96CBB190A5D7C54C1F6D306E1B /* Sources */,
+				4927C92A167F3673CF70DF6594ADC50A /* Frameworks */,
+				5298B3EDB1A8F344153A605040FF36F8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				76C866E2C127883D76B48F5A53E52842 /* PBXTargetDependency */,
-				2773E6D04F201F5DD7C6C22358EACB79 /* PBXTargetDependency */,
+				82AF45D277EAD5FE7B86FBE96087E975 /* PBXTargetDependency */,
 			);
 			name = "Pods-SerialTool";
 			productName = "Pods-SerialTool";
 			productReference = 21104638016FEC34760CA6F14261C81F /* Pods_SerialTool.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		ACC90F9D64F5B2E66D26F066189E7EF2 /* ArgumentParserKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AE9A009E6787B172B8B268098BEC6F7A /* Build configuration list for PBXNativeTarget "ArgumentParserKit" */;
-			buildPhases = (
-				909D0ADBBE156173DA63C7B389FBC963 /* Headers */,
-				C831DCE7C7C847C3962B7F4FF7D250E9 /* Sources */,
-				B73444139DB24BE50A47A20F29C0E07D /* Frameworks */,
-				8C14FE382D4922211B9BAD58538197E5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ArgumentParserKit;
-			productName = ArgumentParserKit;
-			productReference = 31F661B27BA2CA3D2D9B88B526E31869 /* ArgumentParserKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B63242228573749896CE98806EFCD3D1 /* SerialPort */ = {
@@ -436,7 +308,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -444,11 +316,10 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 1D6BD8CF158D45E7C3081359ECB90F69 /* Products */;
+			productRefGroup = 220C4009032601629143136DE33CAF6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ACC90F9D64F5B2E66D26F066189E7EF2 /* ArgumentParserKit */,
 				01551D219920BF11CDAEAE24F198EB90 /* Pods-SerialTool */,
 				B63242228573749896CE98806EFCD3D1 /* SerialPort */,
 			);
@@ -456,14 +327,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8C14FE382D4922211B9BAD58538197E5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		91776D561658C37070B1D3AD5B81D0F8 /* Resources */ = {
+		5298B3EDB1A8F344153A605040FF36F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -480,32 +344,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5F01CAB565C7655EFD4D50E38E8566DC /* Sources */ = {
+		73CECE96CBB190A5D7C54C1F6D306E1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A0AC066A9D1E3E8AB470894809C6416 /* Pods-SerialTool-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C831DCE7C7C847C3962B7F4FF7D250E9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DB5968A0671518DC13188D6350DE395C /* ArgumentParser.swift in Sources */,
-				070AFCA5C5E03987705B479216C7EDAE /* ArgumentParserKit-dummy.m in Sources */,
-				851ED3222BE0D7D7C3A331AFFDBA9F16 /* ByteString.swift in Sources */,
-				B21952FCA372D3F38B368E9861EDC6E8 /* CollectionAlgorithms.swift in Sources */,
-				B36D90C3BE397A9E53780BAF6CDD448B /* CollectionExtensions+only.swift in Sources */,
-				6C94FAFE918E46FEFE1348C0578B6057 /* CollectionExtensions+split.swift in Sources */,
-				2A58FF40160F1D6A948451723CCB0DBB /* Condition.swift in Sources */,
-				1BD9CB24021C0E23FE8A5AD44844E63A /* DictionaryExtensions.swift in Sources */,
-				7D9D8822EC534BE5C95A7A3200514A16 /* FileSystem.swift in Sources */,
-				99B74DCA6AFD0BE50419F93E964F071A /* OutputByteStream.swift in Sources */,
-				2ADADCD5476C4A3426A678B5E7B9C020 /* Path.swift in Sources */,
-				B3529C4E1E12CE8E217FCE246F4C4FB7 /* StringExtensions.swift in Sources */,
-				E1C48F1695BF00386D0C73EE8D717570 /* Thread.swift in Sources */,
-				C751B47D0EDA8D1F7B69EA45BE00E886 /* URL.swift in Sources */,
+				F8E8F6518D856E81A43B927F6BBE65B9 /* Pods-SerialTool-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,17 +373,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2773E6D04F201F5DD7C6C22358EACB79 /* PBXTargetDependency */ = {
+		82AF45D277EAD5FE7B86FBE96087E975 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SerialPort;
 			target = B63242228573749896CE98806EFCD3D1 /* SerialPort */;
-			targetProxy = 281B04FB86715D8B4C976ECE64BC0107 /* PBXContainerItemProxy */;
-		};
-		76C866E2C127883D76B48F5A53E52842 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ArgumentParserKit;
-			target = ACC90F9D64F5B2E66D26F066189E7EF2 /* ArgumentParserKit */;
-			targetProxy = A2C56792AD9E32FBAA5658F398E6553E /* PBXContainerItemProxy */;
+			targetProxy = 4DDEA4FD30C2B13DDB4CBB761800DB2F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -707,47 +544,7 @@
 			};
 			name = Debug;
 		};
-		88FF91A32A3D8DA5A3D172EE86EE88E5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D831DB36544998690414C3DF9C261FB9 /* Pods-SerialTool.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-SerialTool/Pods-SerialTool-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MODULEMAP_FILE = "Target Support Files/Pods-SerialTool/Pods-SerialTool.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A5ABBD5D3C89B0091EFA95861DEDFE7C /* Debug */ = {
+		B469E40D1C15A59A6B97F9387138762F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D3E386C30ECC41B3FDBF2E37E067F54D /* Pods-SerialTool.debug.xcconfig */;
 			buildSettings = {
@@ -787,10 +584,11 @@
 			};
 			name = Debug;
 		};
-		D3018BC1FB5508B99DBCEF0DA1A9F1FF /* Debug */ = {
+		C29DBEF7E9C7F7269366A02A4C238D25 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D2A4FD97601603C39EA153D99A4392F /* ArgumentParserKit.xcconfig */;
+			baseConfigurationReference = D831DB36544998690414C3DF9C261FB9 /* Pods-SerialTool.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -804,60 +602,23 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/ArgumentParserKit/ArgumentParserKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ArgumentParserKit/ArgumentParserKit-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SerialTool/Pods-SerialTool-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/ArgumentParserKit/ArgumentParserKit.modulemap";
-				PRODUCT_MODULE_NAME = ArgumentParserKit;
-				PRODUCT_NAME = ArgumentParserKit;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MODULEMAP_FILE = "Target Support Files/Pods-SerialTool/Pods-SerialTool.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DD51A73B02CB6FB81044B4E0591F4758 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D2A4FD97601603C39EA153D99A4392F /* ArgumentParserKit.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/ArgumentParserKit/ArgumentParserKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ArgumentParserKit/ArgumentParserKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/ArgumentParserKit/ArgumentParserKit.modulemap";
-				PRODUCT_MODULE_NAME = ArgumentParserKit;
-				PRODUCT_NAME = ArgumentParserKit;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -904,11 +665,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		221A830D9FF6B2CC95195AB08ED187E5 /* Build configuration list for PBXNativeTarget "Pods-SerialTool" */ = {
+		141142CA67120C6854EE9D43A33EC00D /* Build configuration list for PBXNativeTarget "Pods-SerialTool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A5ABBD5D3C89B0091EFA95861DEDFE7C /* Debug */,
-				88FF91A32A3D8DA5A3D172EE86EE88E5 /* Release */,
+				B469E40D1C15A59A6B97F9387138762F /* Debug */,
+				C29DBEF7E9C7F7269366A02A4C238D25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -927,15 +688,6 @@
 			buildConfigurations = (
 				00679237278CBCC5E0F737D98A570ABE /* Debug */,
 				EF1FA514E4BABA856DD55EB7342D0321 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AE9A009E6787B172B8B268098BEC6F7A /* Build configuration list for PBXNativeTarget "ArgumentParserKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D3018BC1FB5508B99DBCEF0DA1A9F1FF /* Debug */,
-				DD51A73B02CB6FB81044B4E0591F4758 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

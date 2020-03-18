@@ -1,3 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-SerialTool/Pods-SerialTool-frameworks.sh
-${BUILT_PRODUCTS_DIR}/ArgumentParserKit/ArgumentParserKit.framework
 ${BUILT_PRODUCTS_DIR}/SerialPort/SerialPort.framework

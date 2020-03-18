@@ -1,23 +1,16 @@
 PODS:
-  - ArgumentParserKit (1.0.0)
   - SerialPort (0.1.0)
 
 DEPENDENCIES:
-  - ArgumentParserKit (~> 1.0.0)
   - SerialPort (from `.`)
-
-SPEC REPOS:
-  trunk:
-    - ArgumentParserKit
 
 EXTERNAL SOURCES:
   SerialPort:
     :path: "."
 
 SPEC CHECKSUMS:
-  ArgumentParserKit: 99ceb746098d9f478a6cb9b01b38ce9ecab3122d
   SerialPort: fc5293066231ac66e1da65fa0e8fd821ce471c6e
 
-PODFILE CHECKSUM: c7723d6682957e6ac1a48ad2eeb9ee30f2e9c2f9
+PODFILE CHECKSUM: 0e74b6ebabc44d230d875ca562dfe007a46a2c8a
 
 COCOAPODS: 1.8.4

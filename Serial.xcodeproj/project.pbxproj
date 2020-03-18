@@ -13,9 +13,6 @@
 		E16F76F8240DE2B5006C5FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E16F76F7240DE2B5006C5FC8 /* Assets.xcassets */; };
 		E16F76FB240DE2B6006C5FC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E16F76F9240DE2B5006C5FC8 /* Main.storyboard */; };
 		E16F7701240DE2E7006C5FC8 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B6BAF62400833000E74308 /* IOKit.framework */; };
-		E16F7704240DE354006C5FC8 /* parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76B2240C70EC006C5FC8 /* parser.swift */; };
-		E16F7705240DE354006C5FC8 /* capabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76B6240D8762006C5FC8 /* capabilities.swift */; };
-		E16F7706240DE354006C5FC8 /* arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16F76B8240D8787006C5FC8 /* arguments.swift */; };
 		E1BFB51824073A5400196A02 /* termios.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB022405FBA200E74308 /* termios.swift */; };
 		E1BFB51924073A5800196A02 /* parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB042405FBEF00E74308 /* parameters.swift */; };
 		E1BFB51A24073A5C00196A02 /* flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB062405FC4000E74308 /* flags.swift */; };
@@ -26,6 +23,10 @@
 		E1BFB51F24073A7100196A02 /* connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BAFE2403035F00E74308 /* connection.swift */; };
 		E1BFB52024073A7500196A02 /* posix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6BB002405FB0D00E74308 /* posix.swift */; };
 		E1BFB52124073A8A00196A02 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B6BAF62400833000E74308 /* IOKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		E1C608F324211EE100935BE9 /* ScanWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C608F224211EE100935BE9 /* ScanWindowController.swift */; };
+		E1C608F82422CC2500935BE9 /* dataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C608F72422CC2500935BE9 /* dataModel.swift */; };
+		E1C608FA2422D0B400935BE9 /* modelEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C608F92422D0B400935BE9 /* modelEnums.swift */; };
+		E1C608FD2422D80000935BE9 /* terminalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C608FC2422D80000935BE9 /* terminalViewController.swift */; };
 		EDC1C84880B83251880CE4B6 /* Pods_SerialTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBF6A2648B069475D13F521 /* Pods_SerialTool.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,9 +41,6 @@
 		ADBF6A2648B069475D13F521 /* Pods_SerialTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SerialTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16F765124087007006C5FC8 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E16F76542409DEEC006C5FC8 /* atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atomic.swift; sourceTree = "<group>"; };
-		E16F76B2240C70EC006C5FC8 /* parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parser.swift; sourceTree = "<group>"; };
-		E16F76B6240D8762006C5FC8 /* capabilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capabilities.swift; sourceTree = "<group>"; };
-		E16F76B8240D8787006C5FC8 /* arguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arguments.swift; sourceTree = "<group>"; };
 		E16F76F1240DE2B4006C5FC8 /* SerialTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SerialTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E16F76F3240DE2B4006C5FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E16F76F5240DE2B4006C5FC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +61,10 @@
 		E1BFB51024073A4500196A02 /* SerialPortFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SerialPortFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BFB51324073A4500196A02 /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
 		E1BFB53624073CFA00196A02 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E1C608F224211EE100935BE9 /* ScanWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanWindowController.swift; sourceTree = "<group>"; };
+		E1C608F72422CC2500935BE9 /* dataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataModel.swift; sourceTree = "<group>"; };
+		E1C608F92422D0B400935BE9 /* modelEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelEnums.swift; sourceTree = "<group>"; };
+		E1C608FC2422D80000935BE9 /* terminalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = terminalViewController.swift; sourceTree = "<group>"; };
 		E1ED200724086AAC0019E8AE /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E1ED200824086D360019E8AE /* SerialPort.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SerialPort.podspec; sourceTree = "<group>"; };
 		E69A895AAD27B574694F0D67 /* Pods_serialtool_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_serialtool_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +108,8 @@
 		E16F76F2240DE2B4006C5FC8 /* SerialTool */ = {
 			isa = PBXGroup;
 			children = (
+				E1C608FB2422D7E900935BE9 /* terminal */,
+				E1C608F62422CC0300935BE9 /* scanning */,
 				E16F7702240DE327006C5FC8 /* capabilities */,
 				E16F76F3240DE2B4006C5FC8 /* AppDelegate.swift */,
 				E16F76F5240DE2B4006C5FC8 /* ViewController.swift */,
@@ -120,9 +124,6 @@
 		E16F7702240DE327006C5FC8 /* capabilities */ = {
 			isa = PBXGroup;
 			children = (
-				E16F76B2240C70EC006C5FC8 /* parser.swift */,
-				E16F76B6240D8762006C5FC8 /* capabilities.swift */,
-				E16F76B8240D8787006C5FC8 /* arguments.swift */,
 			);
 			path = capabilities;
 			sourceTree = "<group>";
@@ -211,6 +212,24 @@
 				E1B6BB092405FCB400E74308 /* Connections */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		E1C608F62422CC0300935BE9 /* scanning */ = {
+			isa = PBXGroup;
+			children = (
+				E1C608F224211EE100935BE9 /* ScanWindowController.swift */,
+				E1C608F72422CC2500935BE9 /* dataModel.swift */,
+				E1C608F92422D0B400935BE9 /* modelEnums.swift */,
+			);
+			path = scanning;
+			sourceTree = "<group>";
+		};
+		E1C608FB2422D7E900935BE9 /* terminal */ = {
+			isa = PBXGroup;
+			children = (
+				E1C608FC2422D80000935BE9 /* terminalViewController.swift */,
+			);
+			path = terminal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,11 +385,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C608F324211EE100935BE9 /* ScanWindowController.swift in Sources */,
+				E1C608F82422CC2500935BE9 /* dataModel.swift in Sources */,
 				E16F76F6240DE2B4006C5FC8 /* ViewController.swift in Sources */,
+				E1C608FA2422D0B400935BE9 /* modelEnums.swift in Sources */,
+				E1C608FD2422D80000935BE9 /* terminalViewController.swift in Sources */,
 				E16F76F4240DE2B4006C5FC8 /* AppDelegate.swift in Sources */,
-				E16F7704240DE354006C5FC8 /* parser.swift in Sources */,
-				E16F7705240DE354006C5FC8 /* capabilities.swift in Sources */,
-				E16F7706240DE354006C5FC8 /* arguments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
